@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/statistik.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>Nutritrack</title>
+</head>
+
+<body>
+    <div class="app-frame">
+        <div class="app-container">
+            <div class="main-container">
+
+                <header class="header">
+                    <nav>
+                        <div class="nav-bar">
+                            <i class='bx bx-menu sidebarOpen'></i>
+                            <span class="logo-navbar"><a href="../../index.html"><img
+                                        src="../../../assets/images/logo-desain.png" alt="Logo Web"></a></span>
+
+                            <div class="menu">
+                                <div class="logo-toggle">
+                                    <span class="logo navLogo"><a href="../../index.html"><img
+                                                src="../../../assets/images/logo-desain.png" alt="Logo Web"></a></span>
+                                    <i class='bx bx-x sidebarClose'></i>
+                                </div>
+
+                                <div class="border-navlinks">
+                                    <ul class="nav-links">
+                                        <li><a href="../../index.html" class="navbar-link">Home</a></li>
+                                        <li class="dropdown">
+                                            <div class="dropbtn">
+                                                Jurnal <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                                            </div>
+                                            <ul class="dropdown-content">
+                                                <li>
+                                                    <a href="./activity.html" class="navbar-link">
+                                                        <i class='bx bx-history'></i>
+                                                        <span>Riwayat Aktivitas</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./food.html" class="navbar-link">
+                                                        <i class='bx bx-restaurant'></i>
+                                                        <span>Rekap Makanan</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="./statistik.html" class="navbar-link">Statistik</a></li>
+                                        <li><a href="./comunity.html" class="navbar-link">Komunitas</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="darkLigth-profile">
+
+                                <div class="profileBox">
+                                    <div class="notif">
+                                        <i class='bx bxs-bell cancel'></i>
+                                        <i class='bx bx-bell search'></i>
+                                    </div>
+
+                                    <div class="view-notif">
+                                        <div class="title">
+                                            <span>
+                                                <h3>Notifikasi</h3>
+                                            </span>
+                                        </div>
+                                        <div class="tab">
+                                            <button class="tablinks"
+                                                onclick="openNotif(event, 'SemuaNotif')">Semua</button>
+                                            <button class="tablinks"
+                                                onclick="openNotif(event, 'Aktivitas')">Aktivitas</button>
+                                            <button class="tablinks" onclick="openNotif(event, 'Update')">Update
+                                                <span>Informasi</span></button>
+                                        </div>
+
+                                        <div id="SemuaNotif" class="tabcontent">
+                                        </div>
+
+                                        <div id="Aktivitas" class="tabcontent">
+                                            <div class="pesanBox">
+                                                <div class="pesan-Icon">
+                                                    <div class="circle-svg">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45"
+                                                            viewBox="0 0 40 36" fill="none">
+                                                            <path
+                                                                d="M34.9679 9.5959H29.0868H25.0526L6.14232 0.254883V15.7346L6.14062 31.2165L25.0526 21.8721H29.0868H34.9679L39.9991 19.5084V11.9647L34.9679 9.5959Z"
+                                                                fill="#00A8E6" />
+                                                            <path
+                                                                d="M27.6055 21.8721V35.3121L31.3968 35.2315L33.9837 21.8721H27.6055Z"
+                                                                fill="#FF4000" />
+                                                            <path d="M27.6039 21.8721H25.9492V25.2418H27.6039V21.8721Z"
+                                                                fill="#FEA621" />
+                                                            <path d="M38.2252 12.7881H34.8555V14.1717H38.2252V12.7881Z"
+                                                                fill="#DEC7BC" />
+                                                            <path d="M38.2252 15.0444H34.8555V16.4286H38.2252V15.0444Z"
+                                                                fill="#DEC7BC" />
+                                                            <path d="M38.2252 17.3008H34.8555V18.685H38.2252V17.3008Z"
+                                                                fill="#DEC7BC" />
+                                                            <path
+                                                                d="M5.70076 15.7394C5.70076 19.688 5.2482 23.3987 4.44282 26.6472C4.01111 28.4057 3.474 30.0271 2.85292 31.4694C1.07929 27.3529 0 21.8206 0 15.74C0 9.65486 1.07929 4.12262 2.85292 0.000488281C3.47457 1.44836 4.01111 3.06926 4.44282 4.82767C5.2482 8.07511 5.70076 11.792 5.70076 15.7394Z"
+                                                                fill="#CCCCCC" />
+                                                            <path
+                                                                d="M8.88033 15.7401C8.88033 17.2037 8.81664 18.6347 8.69491 20.0189C8.31843 24.3974 7.37497 28.342 6.03305 31.47H2.85212C3.47264 30.0278 4.00806 28.4057 4.44259 26.6451C4.91432 24.7525 5.25924 22.7061 5.46551 20.543C5.61938 18.9954 5.69884 17.3891 5.69884 15.7401C5.69884 14.494 5.65657 13.2749 5.56583 12.0818C5.38041 9.49488 4.99322 7.05113 4.44202 4.82944C4.00749 3.06934 3.47208 1.44731 2.85156 0H6.03249C7.49614 3.42553 8.49258 7.8148 8.78339 12.6871C8.8482 13.6835 8.88033 14.7059 8.88033 15.7401Z"
+                                                                fill="#F2F2F2" />
+                                                            <path
+                                                                d="M5.70177 15.7395C5.70177 19.688 5.2492 23.3987 4.44383 26.6473C3.63338 23.3993 3.17969 19.688 3.17969 15.7395C3.17969 11.792 3.63338 8.07458 4.44383 4.82715C5.2492 8.07514 5.70177 11.792 5.70177 15.7395Z"
+                                                                fill="#C9330A" />
+                                                            <path
+                                                                d="M5.69834 15.7398C5.69834 17.3889 5.61888 18.9952 5.46501 20.5428C3.5409 20.0981 2.10938 18.3803 2.10938 16.3232C2.10938 14.2339 3.59389 12.4851 5.56534 12.0815C5.65551 13.2747 5.69834 14.4937 5.69834 15.7398Z"
+                                                                fill="#FEA621" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="pesan-Content">
+                                                    <p>Selesaikan target <b>Lari 10 km</b> untuk mendapatkan <b>Waktu
+                                                            main HP bertambah 2 jam.</b></p>
+                                                    <button>Lihat Tantangan</button>
+                                                </div>
+                                                <div class="pesan-time">
+                                                    <span>1 menit</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="Update" class="tabcontent">
+                                            <div class="pesanBox">
+                                                <div class="pesan-Icon">
+                                                    <div class="circle-svg">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="40"
+                                                            viewBox="0 0 31 40" fill="none">
+                                                            <path
+                                                                d="M30.499 39.9999H0L0.944888 1.94287H30.2722L30.499 39.9999Z"
+                                                                fill="url(#paint0_linear_6147_775)" />
+                                                            <path
+                                                                d="M26.9838 3.26553L26.4171 38.4696L1.25 38.0443L2.44054 3.18018L26.9838 3.26553Z"
+                                                                fill="#F2F2F2" />
+                                                            <path
+                                                                d="M26.9847 3.26562H28.4591L27.8919 38.4697H26.418L26.9847 3.26562Z"
+                                                                fill="#B3B3B3" />
+                                                            <path
+                                                                d="M20.7524 1.95137H19.3783C19.3281 1.69828 19.2284 1.50771 19.0835 1.4164C18.9654 1.34444 18.8249 1.33947 18.7028 1.40746C18.5391 1.49828 18.4398 1.69828 18.4304 1.95137C18.4259 1.97023 18.4259 1.99207 18.4259 2.01539V6.34183H7.36914V2.01539C7.36914 1.33948 7.71355 0.740984 8.29418 0.418908C8.88374 0.0878989 9.61821 0.0923639 10.1671 0.428335C10.6748 0.736516 10.9606 1.28985 10.9606 1.95137H9.59985C9.60432 1.76577 9.55469 1.64319 9.45494 1.58513C9.3279 1.5082 9.11897 1.51664 8.96017 1.60696C8.80632 1.69331 8.72891 1.82482 8.72891 2.01539V4.98107H17.0642V2.01539C17.0642 1.99207 17.0642 1.9747 17.0691 1.95137C17.0825 1.19457 17.4453 0.550418 18.0438 0.218913C18.5971 -0.0892676 19.273 -0.0704159 19.8036 0.265059C20.3356 0.600534 20.6666 1.19903 20.7524 1.95137Z"
+                                                                fill="#B0B7CE" />
+                                                            <path
+                                                                d="M8.61719 10.1816V11.599L24.6039 11.9389V10.1816H8.61719Z"
+                                                                fill="#747592" />
+                                                            <path
+                                                                d="M8.61719 16.0391V17.6941L24.1964 18.175L24.4004 16.0391H8.61719Z"
+                                                                fill="#747592" />
+                                                            <path
+                                                                d="M8.61719 22.313V24.0698H24.4004L24.0947 22.313H8.61719Z"
+                                                                fill="#747592" />
+                                                            <path
+                                                                d="M5.51106 8.86621C4.39545 8.86621 3.48828 9.84982 3.48828 11.0612C3.48828 12.2721 4.39545 13.2517 5.51106 13.2517C6.62666 13.2517 7.53383 12.2716 7.53383 11.0612C7.53334 9.84982 6.62666 8.86621 5.51106 8.86621ZM5.08923 12.5028L5.24754 10.3893L4.74879 10.7337L4.5354 10.6205L5.30163 9.81359H5.95918L6.0634 12.5028H5.08923Z"
+                                                                fill="#747592" />
+                                                            <path
+                                                                d="M5.51106 14.916C4.39545 14.916 3.48828 15.8996 3.48828 17.111C3.48828 18.3214 4.39545 19.3015 5.51106 19.3015C6.62666 19.3015 7.53383 18.3214 7.53383 17.111C7.53334 15.9001 6.62666 14.916 5.51106 14.916ZM6.26389 17.9134V18.3363L4.64954 18.2901L4.70413 17.7735C4.70413 17.7735 5.94628 17.2693 5.96018 16.7343C5.98251 16.0817 5.14382 16.118 5.09866 16.5309L4.64954 16.5219C4.61331 15.6053 6.35917 15.3741 6.37257 16.6351C6.38151 17.4554 5.2932 17.8003 5.2932 17.8003L6.26389 17.9134Z"
+                                                                fill="#747592" />
+                                                            <path
+                                                                d="M5.51106 20.9614C4.39545 20.9614 3.48828 21.9455 3.48828 23.1564C3.48828 24.3673 4.39545 25.3469 5.51106 25.3469C6.62666 25.3469 7.53383 24.3673 7.53383 23.1564C7.53334 21.9455 6.62666 20.9614 5.51106 20.9614ZM5.59691 24.4035C5.13439 24.4035 4.77162 24.2492 4.68974 23.7321L5.12496 23.7053C5.12496 23.7053 5.12943 23.8596 5.27434 23.9321C5.51056 24.0542 5.95472 23.9862 5.95918 23.5916C5.96365 23.1152 5.60535 23.2011 5.52843 23.2011L5.50113 22.8522C5.50113 22.8522 5.80485 22.8477 5.80485 22.4264C5.80485 22.009 5.21528 22.0676 5.14283 22.3351L4.78006 22.3217C4.78006 22.3217 4.82075 21.814 5.5056 21.814C6.0634 21.814 6.3949 22.4755 5.98152 22.8884C5.98152 22.8884 6.44403 23.1023 6.4351 23.5777C6.42667 24.0502 6.05943 24.4035 5.59691 24.4035Z"
+                                                                fill="#747592" />
+                                                            <defs>
+                                                                <linearGradient id="paint0_linear_6147_775" x1="0"
+                                                                    y1="20.9713" x2="30.499" y2="20.9713"
+                                                                    gradientUnits="userSpaceOnUse">
+                                                                    <stop stop-color="#2E0000" />
+                                                                    <stop offset="0.1353" stop-color="#430A0A" />
+                                                                    <stop offset="0.7212" stop-color="#983436" />
+                                                                    <stop offset="0.9879" stop-color="#BA4547" />
+                                                                </linearGradient>
+                                                            </defs>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="pesan-Content">
+                                                    <p>Berhasil menambahkan rekap makanan ke jurnalmu!</p>
+                                                    <button>Lihat Jurnal</button>
+                                                </div>
+                                                <div class="pesan-time">
+                                                    <span>3 hari</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="profil">
+                                        <span>Halo, Hanifa</span>
+
+                                        <div class="profileToggle">
+                                            <i class='bx bxs-user cancel'></i>
+                                            <i class='bx bx-user search'></i>
+                                        </div>
+
+                                        <div class="popup-profile">
+                                            <div class="popupBox">
+                                                <div class="headerProfile">
+                                                    <img src="../../../assets/images/profile.png" alt="Foto Profile">
+                                                    <span>Hanifa Nur Akhilah</span>
+                                                </div>
+                                                <div class="contentBox">
+                                                    <a href="#"><span>Dasboard</span></a>
+                                                    <a href="#"><span>Settings</span></a>
+                                                    <a href="./sign.html" class="reds logout"
+                                                        onclick="logout()"><span>Logout</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="startProfile">
+                                    <div class="start">
+                                        <a href="./sign.html"><span>Mulai</span></a>
+                                    </div>
+                                </div>
+
+                                <div class="btn">
+                                    <div class="btn__indicator">
+                                        <div class="btn__icon-container">
+                                            <i class="btn_icon bx "></i>
+                                        </div>
+                                    </div>
+                                    <span class="btn_text"></span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+
+                <main>
+                    <section class="sec-1">
+                        <div class="stat-section">
+                            <div class="stat-content">
+                                <h1 class="animate1" style="--a:0;"><span class="text1">Statistik Aktivitasmu,</span><br>
+                                    <span class="text2">Semua Tercatat!</span>
+                                </h1>
+                                <p class="animate1" style="--a:1;">Mau lebih sehat tanpa ribet? Catat makanan dan pantau kesehatan kamu dengan cara yang
+                                    simpel. </p>
+                                <button class="cta-button animate1" style="--a:2;">
+                                    <a href="./activity.html" class="btn1">Mulai</a>
+                                </button>
+                            </div>
+
+                            <div class="stat-image animate-image">
+                                <img src="../../assets/images/hero-statistik.png" alt="Statistik Image">
+                            </div>
+                        </div>
+
+                        <div class="card-healthy">
+                            <!-- Calories Card -->
+                            <div class="main-card animate2" style="--a:0;">
+                                <div class="card-header">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <path
+                                            d="M16.291 9.16404C15.9118 8.31064 15.3606 7.54466 14.6719 6.91404L14.1035 6.39255C14.0842 6.37533 14.061 6.36311 14.0359 6.35697C14.0107 6.35082 13.9845 6.35093 13.9594 6.35729C13.9344 6.36366 13.9112 6.37608 13.8921 6.39346C13.8729 6.41085 13.8584 6.43267 13.8496 6.45701L13.5957 7.18552C13.4375 7.64255 13.1465 8.10935 12.7344 8.56834C12.707 8.59763 12.6758 8.60545 12.6543 8.6074C12.6328 8.60935 12.5996 8.60545 12.5703 8.5781C12.543 8.55466 12.5293 8.51951 12.5312 8.48435C12.6035 7.30857 12.252 5.9824 11.4824 4.53904C10.8457 3.33982 9.96094 2.40427 8.85547 1.75193L8.04883 1.27732C7.94336 1.21482 7.80859 1.29685 7.81445 1.4199L7.85742 2.3574C7.88672 2.99802 7.8125 3.56443 7.63672 4.03513C7.42187 4.6113 7.11328 5.14646 6.71875 5.62693C6.44419 5.96085 6.13299 6.26287 5.79102 6.52732C4.96739 7.16046 4.29768 7.97172 3.83203 8.90037C3.36753 9.83711 3.12557 10.8685 3.125 11.914C3.125 12.8359 3.30664 13.7285 3.66602 14.5703C4.01302 15.3808 4.51379 16.1163 5.14062 16.7363C5.77344 17.3613 6.50781 17.8535 7.32617 18.1953C8.17383 18.5508 9.07227 18.7304 10 18.7304C10.9277 18.7304 11.8262 18.5508 12.6738 18.1972C13.4902 17.8574 14.2325 17.3619 14.8594 16.7383C15.4922 16.1133 15.9883 15.3828 16.334 14.5722C16.6928 13.7327 16.8769 12.829 16.875 11.916C16.875 10.9629 16.6797 10.0371 16.291 9.16404Z"
+                                            fill="#0062FE" />
+                                    </svg>
+                                    <h2>Calories</h2>
+                                </div>
+                                <hr>
+                                <div class="card-content">
+                                    <h2 class="value">12,360</h4>
+                                        <div class="test">
+                                            <p class="previous-week">20 minggu lalu</p>
+                                            <div class="percentage-up">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.33476 13.6001C8.00339 13.6001 7.73476 13.3315 7.73476 13.0001L7.73476 4.48976L4.56726 7.81596C4.33759 8.05483 3.95776 8.06227 3.7189 7.8326C3.48004 7.60292 3.47259 7.2231 3.70226 6.98423L7.90226 2.58423C8.01539 2.46659 8.17155 2.4001 8.33476 2.4001C8.49797 2.4001 8.65414 2.46659 8.76726 2.58423L12.9673 6.98423C13.1969 7.2231 13.1895 7.60292 12.9506 7.8326C12.7118 8.06227 12.3319 8.05483 12.1023 7.81596L8.93476 4.48976L8.93476 13.0001C8.93476 13.3315 8.66614 13.6001 8.33476 13.6001Z" fill="#207522"/>
+                                                </svg>
+                                                <p class="percentage-change-up">1,2%</p>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+    
+                            <!-- Steps Card -->
+                            <div class="main-card animate2" style="--a:1;">
+                                <div class="card-header">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"
+                                        fill="none">
+                                        <path
+                                            d="M5.56227 14.112C4.67907 14.112 3.96071 13.7928 3.42204 13.1592C2.88336 12.5256 2.52985 11.5854 2.32399 10.2174C2.02086 8.20143 2.32165 6.50221 3.17086 5.43307C3.67086 4.80338 4.32711 4.43932 5.06852 4.38072C5.70329 4.32994 6.65212 4.58736 7.56852 6.09947C8.14235 7.04635 8.57868 8.30416 8.76579 9.55025C8.99196 11.0546 8.8236 12.162 8.25094 12.935C7.79626 13.5491 7.09704 13.9296 6.17243 14.0678C5.9704 14.0975 5.76646 14.1123 5.56227 14.112ZM7.09235 19.3749C6.57633 19.3749 6.05329 19.2096 5.58219 18.8921C4.90243 18.4314 4.4319 17.7211 4.27282 16.9155C4.16149 16.3428 4.22829 15.8878 4.47672 15.5233C4.88024 14.9315 5.60446 14.7983 6.37086 14.6569C6.45172 14.6421 6.53376 14.6272 6.61696 14.6112C6.79352 14.5776 6.97399 14.5331 7.14899 14.4897C7.80446 14.328 8.48258 14.1604 9.04235 14.5581C9.41696 14.8237 9.62829 15.2753 9.69157 15.9378C9.76344 16.7022 9.59938 17.4651 9.22946 18.0862C8.83141 18.7546 8.23454 19.1963 7.54977 19.3307C7.39908 19.3601 7.24589 19.3749 7.09235 19.3749ZM15.1068 10.362C14.9028 10.3612 14.6991 10.3456 14.4974 10.3151C13.5732 10.1784 12.874 9.79752 12.4193 9.18229C11.8466 8.40924 11.6771 7.30221 11.9045 5.79752C12.0916 4.55025 12.5267 3.29361 13.0978 2.35025C14.0095 0.843613 14.9595 0.582285 15.5978 0.628379C16.3369 0.682285 16.992 1.04127 17.4927 1.66744C18.3478 2.73658 18.6509 4.44088 18.3466 6.46588C18.1408 7.83307 17.792 8.76861 17.2486 9.40768C16.7052 10.0467 15.99 10.362 15.1068 10.362ZM13.5767 15.6249C13.4236 15.6248 13.2708 15.6101 13.1205 15.5807C12.4345 15.4463 11.8377 15.0046 11.4408 14.3362C11.0709 13.7151 10.9068 12.9522 10.9787 12.1878C11.0412 11.5237 11.2521 11.0737 11.6279 10.8077C12.1877 10.4104 12.8658 10.5776 13.5213 10.7397C13.6963 10.7827 13.8767 10.8272 14.0533 10.8612L14.299 10.9069C15.0658 11.0479 15.79 11.1803 16.1935 11.7729C16.442 12.1374 16.5088 12.5932 16.3974 13.1651C16.2385 13.9709 15.768 14.6813 15.0881 15.1421C14.6142 15.46 14.0912 15.6249 13.5767 15.6249Z"
+                                            fill="#0062FE" />
+                                    </svg>
+                                    <h2>Steps</h2>
+                                </div>
+                                <hr class="divider">
+                                <div class="card-content">
+                                    <h4 class="value">25,340</h4>
+                                    <div class="test">
+                                        <p class="previous-week">90 minggu lalu</p>
+                                        <div class="percentage-down">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.66719 2.3999C8.99856 2.3999 9.26719 2.66853 9.26719 2.9999L9.26719 11.5102L12.4347 8.18404C12.6644 7.94517 13.0442 7.93773 13.2831 8.1674C13.5219 8.39708 13.5294 8.77691 13.2997 9.01577L9.09969 13.4158C8.98657 13.5334 8.8304 13.5999 8.66719 13.5999C8.50398 13.5999 8.34781 13.5334 8.23469 13.4158L4.03469 9.01577C3.80501 8.77691 3.81246 8.39708 4.05132 8.1674C4.29019 7.93773 4.67001 7.94517 4.89969 8.18404L8.06719 11.5102L8.06719 2.9999C8.06719 2.66853 8.33582 2.3999 8.66719 2.3999Z" fill="#FF463D"/>
+                                            </svg>
+                                            <p class="percentage-change-down">27%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Tasks Card -->
+                            <div class="main-card animate2" style="--a:2;">
+                                <div class="card-header">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_7138_4126)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M6.84667 2.49984C6.61764 3.02562 6.49963 3.59301 6.5 4.1665C6.5 4.60853 6.67559 5.03245 6.98816 5.34502C7.30072 5.65758 7.72464 5.83317 8.16667 5.83317H13.1667C13.6087 5.83317 14.0326 5.65758 14.3452 5.34502C14.6577 5.03245 14.8333 4.60853 14.8333 4.1665C14.8333 3.574 14.71 3.00984 14.4867 2.49984H15.6667C16.1087 2.49984 16.5326 2.67543 16.8452 2.98799C17.1577 3.30055 17.3333 3.72448 17.3333 4.1665V16.6665C17.3333 17.1085 17.1577 17.5325 16.8452 17.845C16.5326 18.1576 16.1087 18.3332 15.6667 18.3332H5.66667C5.22464 18.3332 4.80072 18.1576 4.48816 17.845C4.17559 17.5325 4 17.1085 4 16.6665V4.1665C4 3.72448 4.17559 3.30055 4.48816 2.98799C4.80072 2.67543 5.22464 2.49984 5.66667 2.49984H6.84667ZM10.6667 11.6665H8.16667C7.94565 11.6665 7.73369 11.7543 7.57741 11.9106C7.42113 12.0669 7.33333 12.2788 7.33333 12.4998C7.33333 12.7209 7.42113 12.9328 7.57741 13.0891C7.73369 13.2454 7.94565 13.3332 8.16667 13.3332H10.6667C10.8877 13.3332 11.0996 13.2454 11.2559 13.0891C11.4122 12.9328 11.5 12.7209 11.5 12.4998C11.5 12.2788 11.4122 12.0669 11.2559 11.9106C11.0996 11.7543 10.8877 11.6665 10.6667 11.6665ZM13.1667 8.33317H8.16667C7.95427 8.33341 7.74997 8.41474 7.59553 8.56054C7.44108 8.70635 7.34814 8.90563 7.33569 9.11767C7.32324 9.3297 7.39223 9.53849 7.52855 9.70136C7.66488 9.86424 7.85825 9.96892 8.06917 9.994L8.16667 9.99984H13.1667C13.3877 9.99984 13.5996 9.91204 13.7559 9.75576C13.9122 9.59948 14 9.38752 14 9.1665C14 8.94549 13.9122 8.73353 13.7559 8.57725C13.5996 8.42097 13.3877 8.33317 13.1667 8.33317ZM10.6667 1.6665C11.0184 1.66651 11.3662 1.74074 11.6873 1.88434C12.0083 2.02794 12.2955 2.23767 12.53 2.49984C12.8867 2.89817 13.1167 3.41067 13.1592 3.9765L13.1667 4.1665H8.16667C8.16667 3.56234 8.38083 3.00817 8.7375 2.5765L8.80333 2.49984C9.26167 1.98817 9.92667 1.6665 10.6667 1.6665Z"
+                                                fill="#0062FE" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_7138_4126">
+                                                <rect width="20" height="20" fill="white"
+                                                    transform="translate(0.666016)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <h2>Complete Tasks</h2>
+                                </div>
+                                <hr class="divider">
+                                <div class="card-content">
+                                    <h4 class="value">45/47</h4>
+                                    <div class="test">
+                                        <p class="previous-week">12 minggu lalu</p>
+                                        <div class="percentage-down">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99922 2.3999C8.33059 2.3999 8.59922 2.66853 8.59922 2.9999L8.59922 11.5102L11.7667 8.18404C11.9964 7.94517 12.3762 7.93773 12.6151 8.1674C12.8539 8.39708 12.8614 8.77691 12.6317 9.01577L8.43172 13.4158C8.3186 13.5334 8.16243 13.5999 7.99922 13.5999C7.83601 13.5999 7.67984 13.5334 7.56672 13.4158L3.36672 9.01577C3.13704 8.77691 3.14449 8.39708 3.38335 8.1674C3.62222 7.93773 4.00204 7.94517 4.23172 8.18404L7.39922 11.5102L7.39922 2.9999C7.39922 2.66853 7.66785 2.3999 7.99922 2.3999Z" fill="#FF463D"/>
+                                            </svg>
+                                            <p class="percentage-change-down">27%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sec-2">
+                        <!-- foodplan section -->
+                        <div class="foodplan-section">
+                            <div class="foodplan-header">
+                                <h2 class="animate3">Rekap Makanmu, Sehatmu Terlacak!</h2>
+                                <p class="animate3">Intip kembali apa yang sudah kamu makan hari ini.</p>
+                            </div>
+                            
+                            <div class="form-container">
+                                <div class="container-my-5 animate-image">
+                                    <!-- Bagian untuk navigasi bulan -->
+                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                        <div class="btn-month">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M12.9427 15.8077C13.0007 15.8657 13.0468 15.9347 13.0782 16.0105C13.1097 16.0864 13.1258 16.1677 13.1258 16.2499C13.1258 16.332 13.1097 16.4133 13.0782 16.4892C13.0468 16.565 13.0007 16.634 12.9427 16.692C12.8846 16.7501 12.8157 16.7962 12.7398 16.8276C12.6639 16.859 12.5826 16.8752 12.5005 16.8752C12.4184 16.8752 12.3371 16.859 12.2612 16.8276C12.1853 16.7962 12.1164 16.7501 12.0583 16.692L5.8083 10.442C5.75019 10.384 5.70409 10.3151 5.67264 10.2392C5.64119 10.1633 5.625 10.082 5.625 9.99986C5.625 9.91772 5.64119 9.8364 5.67264 9.76052C5.70409 9.68465 5.75019 9.61572 5.8083 9.55767L12.0583 3.30767C12.1756 3.1904 12.3346 3.12451 12.5005 3.12451C12.6663 3.12451 12.8254 3.1904 12.9427 3.30767C13.06 3.42495 13.1258 3.58401 13.1258 3.74986C13.1258 3.91571 13.06 4.07477 12.9427 4.19205L7.13409 9.99986L12.9427 15.8077Z" fill="#2675EA"/>
+                                            </svg>
+                                        </div>
+                                        
+                                        <div class="calendar-month">
+                                            <select>
+                                                <option value="september">September 2023</option>
+                                                <option value="august">Agustus 2023</option>
+                                                <option value="october">Oktober 2023</option>
+                                            </select>    
+                                        </div>     
+
+                                        <div class="btn-month">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M14.1925 10.442L7.94254 16.692C7.88447 16.7501 7.81553 16.7962 7.73966 16.8276C7.66379 16.859 7.58247 16.8752 7.50035 16.8752C7.41823 16.8752 7.33691 16.859 7.26104 16.8276C7.18517 16.7962 7.11623 16.7501 7.05816 16.692C7.00009 16.634 6.95403 16.565 6.9226 16.4892C6.89117 16.4133 6.875 16.332 6.875 16.2499C6.875 16.1677 6.89117 16.0864 6.9226 16.0105C6.95403 15.9347 7.00009 15.8657 7.05816 15.8077L12.8668 9.99986L7.05816 4.19205C6.94088 4.07477 6.875 3.91571 6.875 3.74986C6.875 3.58401 6.94088 3.42495 7.05816 3.30767C7.17544 3.1904 7.3345 3.12451 7.50035 3.12451C7.6662 3.12451 7.82526 3.1904 7.94254 3.30767L14.1925 9.55767C14.2506 9.61572 14.2967 9.68465 14.3282 9.76052C14.3597 9.8364 14.3758 9.91772 14.3758 9.99986C14.3758 10.082 14.3597 10.1633 14.3282 10.2392C14.2967 10.3151 14.2506 10.384 14.1925 10.442Z" fill="#2675EA"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- Bagian nama hari -->
+                                    <div class="calendar-days">
+                                        <div class="day-name">Min</div>
+                                        <div class="day-name">Sen</div>
+                                        <div class="day-name">Sel</div>
+                                        <div class="day-name">Rab</div>
+                                        <div class="day-name">Kam</div>
+                                        <div class="day-name">Jum</div>
+                                        <div class="day-name">Sab</div>
+                                    </div>
+                                
+                                    <!-- Kalender -->
+                                    <div class="calendar">
+                                        <!-- Minggu pertama (Sisa Agustus) -->
+                                        <div class="dayy"><span>29</span></div>
+                                        <div class="dayy"><span>30</span></div>
+                                        <div class="dayy"><span>31</span></div>
+                                        <div class="day"><span>1</span><div class="dots"><div class="dot green"></div></div></div>
+                                        <div class="day"><span>2</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day"><span>3</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day"><span>4</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        
+                                        <!-- Minggu kedua -->
+                                        <div class="day"><span>5</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day"><span>6</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day"><span>7</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day"><span>8</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day"><span>9</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day"><span>10</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day"><span>11</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        
+                                        <!-- Minggu ketiga -->
+                                        <div class="day"><span>12</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day"><span>13</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day"><span>14</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day"><span>15</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day"><span>16</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day"><span>17</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day"><span>18</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        
+                                        <!-- Minggu keempat -->
+                                        <div class="day"><span>19</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day"><span>20</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day"><span>21</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day"><span>22</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day"><span>23</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day"><span>24</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day"><span>25</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        
+                                        <!-- Minggu kelima -->
+                                        <div class="day"><span>26</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day"><span>27</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day"><span>28</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="day current"><span>29</span></div>
+                                        <div class="day"><span>30</span><div class="dots"><div class="dot green"></div><div class="dot"></div></div></div>
+                                        <div class="dayy"><span>1</span></div>
+                                        <div class="dayy"><span>2</span></div>
+                                    </div>
+                                </div>            
+                                
+                                <div class="box-meal animate2">
+                                    <div class="meal-main">
+                                        <div class="meal-card animate2" style="--a:0;">
+                                            <div class="meal-header">
+                                                <h1>Sarapan</h1>
+                                                <h1>460 kalori</h1>
+                                            </div>
+                                            <div class="meal-content">
+                                                <div class="meal-food">
+                                                    <div class="meal-info">
+                                                        <h4>Telur goreng</h4>
+                                                        <p>220 Kalori</p>
+                                                    </div>
+                                                    <img src="../../assets/images/food.png" alt="food" class="">
+                                                </div>
+                                                <hr>
+                                                <div class="meal-food">
+                                                    <div class="meal-info">
+                                                        <h4>Sayur Asem</h4>
+                                                        <p>240 Kalori</p>
+                                                    </div>
+                                                    <img src="../../assets/images/buah3d.png" alt="food" class="">
+                                                </div>
+                                                <button class="add-meal-button">Tambah Rekapan</button>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="meal-card animate2" style="--a:1;">
+                                            <div class="meal-header">
+                                                <h1>Makan Siang</h1>
+                                                <h1>370 kalori</h1>
+                                            </div>
+                                            <div class="meal-content">
+                                                <div class="meal-food">
+                                                    <div class="meal-info">
+                                                        <h4>Kentang goreng</h4>
+                                                        <p>200 Kalori</p>
+                                                    </div>
+                                                    <img src="../../assets/images/food.png" alt="food" class="">
+                                                </div>
+                                                <hr>
+                                                <div class="meal-food">
+                                                    <div class="meal-info">
+                                                        <h4>Tumis Brokoli</h4>
+                                                        <p>170 Kalori</p>
+                                                    </div>
+                                                    <img src="../../assets/images/buah3d.png" alt="food" class="">
+                                                </div>
+                                                <button class="add-meal-button">Tambah Rekapan</button>
+                                            </div>
+                                        </div>
+    
+                                        <div class="meal-card animate2" style="--a:2;">
+                                            <div class="meal-header">
+                                                <h1>Makan Siang</h1>
+                                                <h1>370 kalori</h1>
+                                            </div>
+                                            <div class="meal-content">
+                                                <div class="meal-food">
+                                                    <div class="meal-info">
+                                                        <h4>Kentang goreng</h4>
+                                                        <p>200 Kalori</p>
+                                                    </div>
+                                                    <img src="../../assets/images/food.png" alt="food" class="">
+                                                </div>
+                                                <hr>
+                                                <div class="meal-food">
+                                                    <div class="meal-info">
+                                                        <h4>Tumis Brokoli</h4>
+                                                        <p>170 Kalori</p>
+                                                    </div>
+                                                    <img src="../../assets/images/buah3d.png" alt="food" class="">
+                                                </div>
+                                                <button class="add-meal-button">Tambah Rekapan</button>
+                                            </div>
+                                        </div>
+    
+                                        <div class="meal-card animate2" style="--a:3;">
+                                            <div class="meal-header">
+                                                <h1>Makan Siang</h1>
+                                                <h1>370 kalori</h1>
+                                            </div>
+                                            <div class="meal-content">
+                                                <div class="meal-food">
+                                                    <div class="meal-info">
+                                                        <h4>Kentang goreng</h4>
+                                                        <p>200 Kalori</p>
+                                                    </div>
+                                                    <img src="../../assets/images/food.png" alt="food" class="">
+                                                </div>
+                                                <hr>
+                                                <div class="meal-food">
+                                                    <div class="meal-info">
+                                                        <h4>Tumis Brokoli</h4>
+                                                        <p>170 Kalori</p>
+                                                    </div>
+                                                    <img src="../../assets/images/buah3d.png" alt="food" class="">
+                                                </div>
+                                                <button class="add-meal-button">Tambah Rekapan</button>
+                                            </div>
+                                        </div>
+                                    </div>     
+                                </div>
+                            </div>       
+                        </div>
+                    </section>
+
+                    <section class="sec-3">
+                        <div class="grafik-section">
+                            <h2 class="animate3">Angka Bicara: Kalori & Nutrisi Konsumsimu</h2>
+                            <p class="animate3">Dari kalori hingga karbohidrat, semua sudah terekap dalam statistik harianmu.</p>
+                    
+                            <div class="box animate1">
+                                <div class="jurnal">
+                                    <h1>Jurnalmu</h1>
+                                </div>
+                                <hr>
+                                
+                                <div class="chart">
+                                    <ul class="numbers">
+                                        <li><span>100%</span></li>
+                                        <li><span>75%</span></li>
+                                        <li><span>55%</span></li>
+                                        <li><span>35%</span></li>
+                                        <li><span>20%</span></li>
+                                    </ul>
+                                    <ul class="bars">
+                                        <li><div class="bar" data-percentage="60" data-tooltip="Kalori 213 g\nKarbo 233 g\nProtein 133 g"></div><span>Senin</span></li>
+                                        <li><div class="bar" data-percentage="75" data-tooltip="Kalori 250 g\nKarbo 200 g\nProtein 150 g"></div><span>Selasa</span></li>
+                                        <li><div class="bar" data-percentage="50" data-tooltip="Kalori 180 g\nKarbo 180 g\nProtein 120 g"></div><span>Rabu</span></li>
+                                        <li><div class="bar" data-percentage="40" data-tooltip="Kalori 120 g\nKarbo 100 g\nProtein 80 g"></div><span>Kamis</span></li>
+                                        <li><div class="bar" data-percentage="90" data-tooltip="Kalori 300 g\nKarbo 250 g\nProtein 170 g"></div><span>Jumat</span></li>
+                                        <li><div class="bar" data-percentage="60" data-tooltip="Kalori 200 g\nKarbo 220 g\nProtein 130 g"></div><span>Sabtu</span></li>
+                                        <li><div class="bar" data-percentage="70" data-tooltip="Kalori 220 g\nKarbo 210 g\nProtein 140 g"></div><span>Minggu</span></li>
+                                    </ul>
+                                </div>          
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sec-4">
+                        <div class="target-section">
+                            <div class="target-header animate1">
+                                <h2>Pencapaianmu Menyelesaikan Tantangan</h2>
+                                <p> Lihat sejauh mana kamu berhasil menyelesaikan tantangan.</p>
+                            </div>
+                            
+                            <div class="box-card animate-target" style="--a:0;">
+                                <div class="target-card">
+                                    <div class="target-content animate-target" style="--a:0;" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                                            <path d="M3.40039 10C3.40039 9.17157 4.07196 8.5 4.90039 8.5C5.72882 8.5 6.40039 9.17157 6.40039 10C6.40039 10.8284 5.72882 11.5 4.90039 11.5C4.07196 11.5 3.40039 10.8284 3.40039 10Z" fill="#1E448A"/>
+                                            <path d="M8.90039 10C8.90039 9.17157 9.57196 8.5 10.4004 8.5C11.2288 8.5 11.9004 9.17157 11.9004 10C11.9004 10.8284 11.2288 11.5 10.4004 11.5C9.57196 11.5 8.90039 10.8284 8.90039 10Z" fill="#1E448A"/>
+                                            <path d="M15.9004 8.5C15.072 8.5 14.4004 9.17157 14.4004 10C14.4004 10.8284 15.072 11.5 15.9004 11.5C16.7288 11.5 17.4004 10.8284 17.4004 10C17.4004 9.17157 16.7288 8.5 15.9004 8.5Z" fill="#1E448A"/>
+                                        </svg>
+                                        <div class="isi-content">
+                                            <p>Senin, 3 Feb 2024</p>
+                                            <h3>Lari 3km pagi ini</h3>
+                                        </div>
+                                        <div class="progress">
+                                            <p>100%</p>
+                                            <div class="progress-bar" style="width: 100%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="target-content animate-target" style="--a:1;" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                                            <path d="M3.40039 10C3.40039 9.17157 4.07196 8.5 4.90039 8.5C5.72882 8.5 6.40039 9.17157 6.40039 10C6.40039 10.8284 5.72882 11.5 4.90039 11.5C4.07196 11.5 3.40039 10.8284 3.40039 10Z" fill="#1E448A"/>
+                                            <path d="M8.90039 10C8.90039 9.17157 9.57196 8.5 10.4004 8.5C11.2288 8.5 11.9004 9.17157 11.9004 10C11.9004 10.8284 11.2288 11.5 10.4004 11.5C9.57196 11.5 8.90039 10.8284 8.90039 10Z" fill="#1E448A"/>
+                                            <path d="M15.9004 8.5C15.072 8.5 14.4004 9.17157 14.4004 10C14.4004 10.8284 15.072 11.5 15.9004 11.5C16.7288 11.5 17.4004 10.8284 17.4004 10C17.4004 9.17157 16.7288 8.5 15.9004 8.5Z" fill="#1E448A"/>
+                                        </svg>
+                                        <div class="isi-content">
+                                            <p>Selasa, 4 Feb 2024</p>
+                                            <h3>Gym Minggu pagi</h3>
+                                        </div>
+                                        <div class="progress">
+                                            <p>100%</p>
+                                            <div class="progress-bar" style="width: 100%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="target-content animate-target" style="--a:2;" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                                            <path d="M3.40039 10C3.40039 9.17157 4.07196 8.5 4.90039 8.5C5.72882 8.5 6.40039 9.17157 6.40039 10C6.40039 10.8284 5.72882 11.5 4.90039 11.5C4.07196 11.5 3.40039 10.8284 3.40039 10Z" fill="#1E448A"/>
+                                            <path d="M8.90039 10C8.90039 9.17157 9.57196 8.5 10.4004 8.5C11.2288 8.5 11.9004 9.17157 11.9004 10C11.9004 10.8284 11.2288 11.5 10.4004 11.5C9.57196 11.5 8.90039 10.8284 8.90039 10Z" fill="#1E448A"/>
+                                            <path d="M15.9004 8.5C15.072 8.5 14.4004 9.17157 14.4004 10C14.4004 10.8284 15.072 11.5 15.9004 11.5C16.7288 11.5 17.4004 10.8284 17.4004 10C17.4004 9.17157 16.7288 8.5 15.9004 8.5Z" fill="#1E448A"/>
+                                        </svg>
+                                        <div class="isi-content">
+                                            <p>Kamis, 10 Feb 2024</p>
+                                            <h3>Badminton</h3>
+                                        </div>
+                                        <div class="progress">
+                                            <p>100%</p>
+                                            <div class="progress-bar" style="width: 100%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="target-content animate-target" style="--a:3;" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                                            <path d="M3.40039 10C3.40039 9.17157 4.07196 8.5 4.90039 8.5C5.72882 8.5 6.40039 9.17157 6.40039 10C6.40039 10.8284 5.72882 11.5 4.90039 11.5C4.07196 11.5 3.40039 10.8284 3.40039 10Z" fill="#1E448A"/>
+                                            <path d="M8.90039 10C8.90039 9.17157 9.57196 8.5 10.4004 8.5C11.2288 8.5 11.9004 9.17157 11.9004 10C11.9004 10.8284 11.2288 11.5 10.4004 11.5C9.57196 11.5 8.90039 10.8284 8.90039 10Z" fill="#1E448A"/>
+                                            <path d="M15.9004 8.5C15.072 8.5 14.4004 9.17157 14.4004 10C14.4004 10.8284 15.072 11.5 15.9004 11.5C16.7288 11.5 17.4004 10.8284 17.4004 10C17.4004 9.17157 16.7288 8.5 15.9004 8.5Z" fill="#1E448A"/>
+                                        </svg>
+                                        <div class="isi-content">
+                                            <p>Sabtu, 13 Feb 2024</p>
+                                            <h3>Gym Minggu pagi</h3>
+                                        </div>
+                                        <div class="progress">
+                                            <p>100%</p>
+                                            <div class="progress-bar" style="width: 100%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="target-content animate-target" style="--a:4;" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                                            <path d="M3.40039 10C3.40039 9.17157 4.07196 8.5 4.90039 8.5C5.72882 8.5 6.40039 9.17157 6.40039 10C6.40039 10.8284 5.72882 11.5 4.90039 11.5C4.07196 11.5 3.40039 10.8284 3.40039 10Z" fill="#1E448A"/>
+                                            <path d="M8.90039 10C8.90039 9.17157 9.57196 8.5 10.4004 8.5C11.2288 8.5 11.9004 9.17157 11.9004 10C11.9004 10.8284 11.2288 11.5 10.4004 11.5C9.57196 11.5 8.90039 10.8284 8.90039 10Z" fill="#1E448A"/>
+                                            <path d="M15.9004 8.5C15.072 8.5 14.4004 9.17157 14.4004 10C14.4004 10.8284 15.072 11.5 15.9004 11.5C16.7288 11.5 17.4004 10.8284 17.4004 10C17.4004 9.17157 16.7288 8.5 15.9004 8.5Z" fill="#1E448A"/>
+                                        </svg>
+                                        <div class="isi-content">
+                                            <p>Minggu, 23 Feb 2024</p>
+                                            <h3>Lari 5km</h3>
+                                        </div>
+                                        <div class="progress">
+                                            <p>100%</p>
+                                            <div class="progress-bar" style="width: 100%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="target-content animate-target" style="--a:5;" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                                            <path d="M3.40039 10C3.40039 9.17157 4.07196 8.5 4.90039 8.5C5.72882 8.5 6.40039 9.17157 6.40039 10C6.40039 10.8284 5.72882 11.5 4.90039 11.5C4.07196 11.5 3.40039 10.8284 3.40039 10Z" fill="#1E448A"/>
+                                            <path d="M8.90039 10C8.90039 9.17157 9.57196 8.5 10.4004 8.5C11.2288 8.5 11.9004 9.17157 11.9004 10C11.9004 10.8284 11.2288 11.5 10.4004 11.5C9.57196 11.5 8.90039 10.8284 8.90039 10Z" fill="#1E448A"/>
+                                            <path d="M15.9004 8.5C15.072 8.5 14.4004 9.17157 14.4004 10C14.4004 10.8284 15.072 11.5 15.9004 11.5C16.7288 11.5 17.4004 10.8284 17.4004 10C17.4004 9.17157 16.7288 8.5 15.9004 8.5Z" fill="#1E448A"/>
+                                        </svg>
+                                        <div class="isi-content">
+                                            <p>Selasa, 3 Mar 2024</p>
+                                            <h3>Yoga 15 menit aja</h3>
+                                        </div>
+                                        <div class="progress">
+                                            <p>100%</p>
+                                            <div class="progress-bar" style="width: 100%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="target-content animate-target" style="--a:6;" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                                            <path d="M3.40039 10C3.40039 9.17157 4.07196 8.5 4.90039 8.5C5.72882 8.5 6.40039 9.17157 6.40039 10C6.40039 10.8284 5.72882 11.5 4.90039 11.5C4.07196 11.5 3.40039 10.8284 3.40039 10Z" fill="#1E448A"/>
+                                            <path d="M8.90039 10C8.90039 9.17157 9.57196 8.5 10.4004 8.5C11.2288 8.5 11.9004 9.17157 11.9004 10C11.9004 10.8284 11.2288 11.5 10.4004 11.5C9.57196 11.5 8.90039 10.8284 8.90039 10Z" fill="#1E448A"/>
+                                            <path d="M15.9004 8.5C15.072 8.5 14.4004 9.17157 14.4004 10C14.4004 10.8284 15.072 11.5 15.9004 11.5C16.7288 11.5 17.4004 10.8284 17.4004 10C17.4004 9.17157 16.7288 8.5 15.9004 8.5Z" fill="#1E448A"/>
+                                        </svg>
+                                        <div class="isi-content">
+                                            <p>Kamis, 5 Mar 2024r</p>
+                                            <h3>Ikut Shaolin</h3>
+                                        </div>
+                                        <div class="progress">
+                                            <p>100%</p>
+                                            <div class="progress-bar" style="width: 100%;"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="target-content animate-target" style="--a:7;" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                                            <path d="M3.40039 10C3.40039 9.17157 4.07196 8.5 4.90039 8.5C5.72882 8.5 6.40039 9.17157 6.40039 10C6.40039 10.8284 5.72882 11.5 4.90039 11.5C4.07196 11.5 3.40039 10.8284 3.40039 10Z" fill="#1E448A"/>
+                                            <path d="M8.90039 10C8.90039 9.17157 9.57196 8.5 10.4004 8.5C11.2288 8.5 11.9004 9.17157 11.9004 10C11.9004 10.8284 11.2288 11.5 10.4004 11.5C9.57196 11.5 8.90039 10.8284 8.90039 10Z" fill="#1E448A"/>
+                                            <path d="M15.9004 8.5C15.072 8.5 14.4004 9.17157 14.4004 10C14.4004 10.8284 15.072 11.5 15.9004 11.5C16.7288 11.5 17.4004 10.8284 17.4004 10C17.4004 9.17157 16.7288 8.5 15.9004 8.5Z" fill="#1E448A"/>
+                                        </svg>
+                                        <div class="isi-content">
+                                            <p>Sabtu, 19 Mar 2024r</p>
+                                            <h3>Lari 2km</h3>
+                                        </div>
+                                        <div class="progress">
+                                            <p>100%</p>
+                                            <div class="progress-bar" style="width: 100%;"></div>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="target-content animate-target" style="--a:8;" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                                            <path d="M3.40039 10C3.40039 9.17157 4.07196 8.5 4.90039 8.5C5.72882 8.5 6.40039 9.17157 6.40039 10C6.40039 10.8284 5.72882 11.5 4.90039 11.5C4.07196 11.5 3.40039 10.8284 3.40039 10Z" fill="#1E448A"/>
+                                            <path d="M8.90039 10C8.90039 9.17157 9.57196 8.5 10.4004 8.5C11.2288 8.5 11.9004 9.17157 11.9004 10C11.9004 10.8284 11.2288 11.5 10.4004 11.5C9.57196 11.5 8.90039 10.8284 8.90039 10Z" fill="#1E448A"/>
+                                            <path d="M15.9004 8.5C15.072 8.5 14.4004 9.17157 14.4004 10C14.4004 10.8284 15.072 11.5 15.9004 11.5C16.7288 11.5 17.4004 10.8284 17.4004 10C17.4004 9.17157 16.7288 8.5 15.9004 8.5Z" fill="#1E448A"/>
+                                        </svg>
+                                        <div class="isi-content">
+                                            <p>Minggu, 20 Mar 2024</p>
+                                            <h3>Gym malem</h3>
+                                        </div>
+                                        <div class="progress">
+                                            <p>100%</p>
+                                            <div class="progress-bar" style="width: 100%;"></div>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="target-content animate-target" style="--a:9;" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                                            <path d="M3.40039 10C3.40039 9.17157 4.07196 8.5 4.90039 8.5C5.72882 8.5 6.40039 9.17157 6.40039 10C6.40039 10.8284 5.72882 11.5 4.90039 11.5C4.07196 11.5 3.40039 10.8284 3.40039 10Z" fill="#1E448A"/>
+                                            <path d="M8.90039 10C8.90039 9.17157 9.57196 8.5 10.4004 8.5C11.2288 8.5 11.9004 9.17157 11.9004 10C11.9004 10.8284 11.2288 11.5 10.4004 11.5C9.57196 11.5 8.90039 10.8284 8.90039 10Z" fill="#1E448A"/>
+                                            <path d="M15.9004 8.5C15.072 8.5 14.4004 9.17157 14.4004 10C14.4004 10.8284 15.072 11.5 15.9004 11.5C16.7288 11.5 17.4004 10.8284 17.4004 10C17.4004 9.17157 16.7288 8.5 15.9004 8.5Z" fill="#1E448A"/>
+                                        </svg>
+                                        <div class="isi-content">
+                                            <p>Kamis, 29 Mar 2024</p>
+                                            <h3>Renang</h3>
+                                        </div>
+                                        <div class="progress">
+                                            <p>100%</p>
+                                            <div class="progress-bar" style="width: 100%;"></div>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </section>
+
+                </main>
+
+                <footer>
+                    <div class="footer">
+                        <div class="main-footer">
+                            <div class="footer-container">
+                                <div class="footer-section about animate1" style="--a:0;">
+                                    <div class="logo-container">
+                                        <img src="../../../assets/images/logo-desain.png" alt="Logo" class="logo">
+                                        <h1>NutriTrack</h1>
+                                    </div>
+                                    <p>Lacak aktivitas, pola makan, hingga kesehatan untuk mencapai gaya hidup yang
+                                        lebih sehat.</p>
+                                    <div class="social-icons">
+                                        <a href="#"><i class='bx bxl-facebook'></i></i></a>
+                                        <a href="#"><i class='bx bxl-twitter'></i></i></a>
+                                        <a href="#"><i class='bx bxl-instagram-alt'></i></i></a>
+                                        <a href="#"><i class='bx bxl-linkedin'></i></i></a>
+                                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                                    </div>
+                                </div>
+                                <div class="footer-section links animate1" style="--a:1;">
+                                    <h2>Product</h2>
+                                    <ul>
+                                        <li><a href="#">Features</a></li>
+                                        <li><a href="#">Pricing</a></li>
+                                        <li><a href="#">Case studies</a></li>
+                                        <li><a href="#">Reviews</a></li>
+                                        <li><a href="#">Updates</a></li>
+                                    </ul>
+                                </div>
+                                <div class="footer-section links animate1" style="--a:2;">
+                                    <h2>Support</h2>
+                                    <ul>
+                                        <li><a href="#">Getting started</a></li>
+                                        <li><a href="#">Help center</a></li>
+                                        <li><a href="#">Server status</a></li>
+                                        <li><a href="#">Report a bug</a></li>
+                                        <li><a href="#">Chat support</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="footer-section contact animate1" style="--a:3;">
+                                    <h2>Contacts us</h2>
+                                    <ul>
+                                        <li><a href="mailto:contact@company.com"><i class='bx bx-envelope'></i>
+                                                contact@naxdesigners.com</a></li>
+                                        <li><a href="tel:+14146875892"><i class='bx bx-phone'></i> +62 888 143127119</a>
+                                        </li>
+                                        <li><a href="https://maps.app.goo.gl/JkPu5CWncLRmG48MA" target="_blank"><i
+                                                    class='bx bx-map'></i> Jl. Simpang Lima, Kota Semarang</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer-bottom">
+                                <p class="animate2">Copyright &copy; 2024 N4x D3sign3rs</p>
+                                <p class="animate2"> All Rights Reserved |
+                                    <a href="#">Terms and Conditions |</a>
+                                    <a href="#">Privacy Policy</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <div class="loader-container">
+            <div class="container">
+                <div class="loader">
+                    <span style="--i:0;"></span>
+                    <span style="--i:1;"></span>
+                    <span style="--i:2;"></span>
+                    <span style="--i:3;"></span>
+                    <span style="--i:4;"></span>
+                    <span style="--i:5;"></span>
+                    <span style="--i:6;"></span>
+                    <span class="rotate" style="--j:0;"></span>
+                    <span class="rotate" style="--j:1;"></span>
+                    <span class="rotate" style="--j:2;"></span>
+                    <span class="rotate" style="--j:3;"></span>
+                </div>
+            </div>
+        </div>
+        <svg style="width: 0;height: 0;">
+            <filter id="Gooey">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+                <feColorMatrix Values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 20 -10 
+                " />
+            </filter>
+        </svg>
+        <div id="progress">
+            <span id="progress_value"><i class='bx bxs-chevrons-up bx-flashing'></i></span>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $('.bars li .bar').each(function (key, bar) {
+                var percentage = $(this).data('percentage');
+                $(this).animate({
+                    'height': percentage + '%'
+                }, 1000);
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var bars = document.querySelectorAll('.bar');
+
+            bars.forEach(function (bar) {
+                var tooltip = document.createElement('div');
+                tooltip.className = 'tooltip';
+                tooltip.textContent = bar.getAttribute('data-tooltip').replace(/\\n/g, '\n');
+                bar.appendChild(tooltip);
+
+                bar.addEventListener('mouseover', function () {
+                    tooltip.style.opacity = 1;
+                });
+
+                bar.addEventListener('mouseout', function () {
+                    tooltip.style.opacity = 0;
+                });
+            });
+        });
+        function logout() {
+            localStorage.removeItem('isLoggedIn');
+            window.location.href = './sign.html';
+        }
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+            if (isLoggedIn === 'true') {
+                // Tampilkan profileBox dan sembunyikan startProfile
+                document.querySelector('.profileBox').style.display = 'flex';
+                document.querySelector('.startProfile').style.display = 'none';
+            } else {
+                // Sembunyikan profileBox dan tampilkan startProfile
+                document.querySelector('.profileBox').style.display = 'none';
+                document.querySelector('.startProfile').style.display = 'block';
+            }
+        });
+
+    </script>
+
+    <script src="../js/statistik.js"></script>
+
+</body>
+
+</html>

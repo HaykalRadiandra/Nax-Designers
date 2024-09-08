@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/foodie.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>Nutritrack</title>
+</head>
+
+<body>
+    <div class="app-frame">
+        <div class="app-container">
+            <div class="main-container">
+
+                <header class="header">
+                    <nav>
+                        <div class="nav-bar">
+                            <i class='bx bx-menu sidebarOpen'></i>
+                            <span class="logo-navbar"><a href="../../index.html"><img
+                                        src="../../assets/images/logo-desain.png" alt="Logo Web"></a></span>
+
+                            <div class="menu">
+                                <div class="logo-toggle">
+                                    <span class="logo navLogo"><a href="../../index.html"><img
+                                                src="../../assets/images/logo-desain.png" alt="Logo Web"></a></span>
+                                    <i class='bx bx-x sidebarClose'></i>
+                                </div>
+
+                                <div class="border-navlinks">
+                                    <ul class="nav-links">
+                                        <li><a href="../../index.html" class="navbar-link">Home</a></li>
+                                        <li class="dropdown">
+                                            <div class="dropbtn">
+                                                Jurnal <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                                            </div>
+                                            <ul class="dropdown-content">
+                                                <li>
+                                                    <a href="./activity.html" class="navbar-link">
+                                                        <i class='bx bx-history'></i>
+                                                        <span>Riwayat Aktivitas</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./food.html" class="navbar-link">
+                                                        <i class='bx bx-restaurant'></i>
+                                                        <span>Rekap Makanan</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="./statistik.html" class="navbar-link">Statistik</a></li>
+                                        <li><a href="./comunity.html" class="navbar-link">Komunitas</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="darkLigth-profile">
+
+                                <div class="profileBox">
+                                    <div class="notif">
+                                        <i class='bx bxs-bell cancel'></i>
+                                        <i class='bx bx-bell search'></i>
+                                    </div>
+
+                                    <div class="view-notif">
+                                        <div class="title">
+                                            <span>
+                                                <h3>Notifikasi</h3>
+                                            </span>
+                                        </div>
+                                        <div class="tab">
+                                            <button class="tablinks"
+                                                onclick="openNotif(event, 'SemuaNotif')">Semua</button>
+                                            <button class="tablinks"
+                                                onclick="openNotif(event, 'Aktivitas')">Aktivitas</button>
+                                            <button class="tablinks" onclick="openNotif(event, 'Update')">Update
+                                                <span>Informasi</span></button>
+                                        </div>
+
+                                        <div id="SemuaNotif" class="tabcontent">
+                                        </div>
+
+                                        <div id="Aktivitas" class="tabcontent">
+                                            <div class="pesanBox">
+                                                <div class="pesan-Icon">
+                                                    <div class="circle-svg">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45"
+                                                            viewBox="0 0 40 36" fill="none">
+                                                            <path
+                                                                d="M34.9679 9.5959H29.0868H25.0526L6.14232 0.254883V15.7346L6.14062 31.2165L25.0526 21.8721H29.0868H34.9679L39.9991 19.5084V11.9647L34.9679 9.5959Z"
+                                                                fill="#00A8E6" />
+                                                            <path
+                                                                d="M27.6055 21.8721V35.3121L31.3968 35.2315L33.9837 21.8721H27.6055Z"
+                                                                fill="#FF4000" />
+                                                            <path d="M27.6039 21.8721H25.9492V25.2418H27.6039V21.8721Z"
+                                                                fill="#FEA621" />
+                                                            <path d="M38.2252 12.7881H34.8555V14.1717H38.2252V12.7881Z"
+                                                                fill="#DEC7BC" />
+                                                            <path d="M38.2252 15.0444H34.8555V16.4286H38.2252V15.0444Z"
+                                                                fill="#DEC7BC" />
+                                                            <path d="M38.2252 17.3008H34.8555V18.685H38.2252V17.3008Z"
+                                                                fill="#DEC7BC" />
+                                                            <path
+                                                                d="M5.70076 15.7394C5.70076 19.688 5.2482 23.3987 4.44282 26.6472C4.01111 28.4057 3.474 30.0271 2.85292 31.4694C1.07929 27.3529 0 21.8206 0 15.74C0 9.65486 1.07929 4.12262 2.85292 0.000488281C3.47457 1.44836 4.01111 3.06926 4.44282 4.82767C5.2482 8.07511 5.70076 11.792 5.70076 15.7394Z"
+                                                                fill="#CCCCCC" />
+                                                            <path
+                                                                d="M8.88033 15.7401C8.88033 17.2037 8.81664 18.6347 8.69491 20.0189C8.31843 24.3974 7.37497 28.342 6.03305 31.47H2.85212C3.47264 30.0278 4.00806 28.4057 4.44259 26.6451C4.91432 24.7525 5.25924 22.7061 5.46551 20.543C5.61938 18.9954 5.69884 17.3891 5.69884 15.7401C5.69884 14.494 5.65657 13.2749 5.56583 12.0818C5.38041 9.49488 4.99322 7.05113 4.44202 4.82944C4.00749 3.06934 3.47208 1.44731 2.85156 0H6.03249C7.49614 3.42553 8.49258 7.8148 8.78339 12.6871C8.8482 13.6835 8.88033 14.7059 8.88033 15.7401Z"
+                                                                fill="#F2F2F2" />
+                                                            <path
+                                                                d="M5.70177 15.7395C5.70177 19.688 5.2492 23.3987 4.44383 26.6473C3.63338 23.3993 3.17969 19.688 3.17969 15.7395C3.17969 11.792 3.63338 8.07458 4.44383 4.82715C5.2492 8.07514 5.70177 11.792 5.70177 15.7395Z"
+                                                                fill="#C9330A" />
+                                                            <path
+                                                                d="M5.69834 15.7398C5.69834 17.3889 5.61888 18.9952 5.46501 20.5428C3.5409 20.0981 2.10938 18.3803 2.10938 16.3232C2.10938 14.2339 3.59389 12.4851 5.56534 12.0815C5.65551 13.2747 5.69834 14.4937 5.69834 15.7398Z"
+                                                                fill="#FEA621" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="pesan-Content">
+                                                    <p>Selesaikan target <b>Lari 10 km</b> untuk mendapatkan <b>Waktu
+                                                            main HP bertambah 2 jam.</b></p>
+                                                    <button>Lihat Tantangan</button>
+                                                </div>
+                                                <div class="pesan-time">
+                                                    <span>1 menit</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="Update" class="tabcontent">
+                                            <div class="pesanBox">
+                                                <div class="pesan-Icon">
+                                                    <div class="circle-svg">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="40"
+                                                            viewBox="0 0 31 40" fill="none">
+                                                            <path
+                                                                d="M30.499 39.9999H0L0.944888 1.94287H30.2722L30.499 39.9999Z"
+                                                                fill="url(#paint0_linear_6147_775)" />
+                                                            <path
+                                                                d="M26.9838 3.26553L26.4171 38.4696L1.25 38.0443L2.44054 3.18018L26.9838 3.26553Z"
+                                                                fill="#F2F2F2" />
+                                                            <path
+                                                                d="M26.9847 3.26562H28.4591L27.8919 38.4697H26.418L26.9847 3.26562Z"
+                                                                fill="#B3B3B3" />
+                                                            <path
+                                                                d="M20.7524 1.95137H19.3783C19.3281 1.69828 19.2284 1.50771 19.0835 1.4164C18.9654 1.34444 18.8249 1.33947 18.7028 1.40746C18.5391 1.49828 18.4398 1.69828 18.4304 1.95137C18.4259 1.97023 18.4259 1.99207 18.4259 2.01539V6.34183H7.36914V2.01539C7.36914 1.33948 7.71355 0.740984 8.29418 0.418908C8.88374 0.0878989 9.61821 0.0923639 10.1671 0.428335C10.6748 0.736516 10.9606 1.28985 10.9606 1.95137H9.59985C9.60432 1.76577 9.55469 1.64319 9.45494 1.58513C9.3279 1.5082 9.11897 1.51664 8.96017 1.60696C8.80632 1.69331 8.72891 1.82482 8.72891 2.01539V4.98107H17.0642V2.01539C17.0642 1.99207 17.0642 1.9747 17.0691 1.95137C17.0825 1.19457 17.4453 0.550418 18.0438 0.218913C18.5971 -0.0892676 19.273 -0.0704159 19.8036 0.265059C20.3356 0.600534 20.6666 1.19903 20.7524 1.95137Z"
+                                                                fill="#B0B7CE" />
+                                                            <path
+                                                                d="M8.61719 10.1816V11.599L24.6039 11.9389V10.1816H8.61719Z"
+                                                                fill="#747592" />
+                                                            <path
+                                                                d="M8.61719 16.0391V17.6941L24.1964 18.175L24.4004 16.0391H8.61719Z"
+                                                                fill="#747592" />
+                                                            <path
+                                                                d="M8.61719 22.313V24.0698H24.4004L24.0947 22.313H8.61719Z"
+                                                                fill="#747592" />
+                                                            <path
+                                                                d="M5.51106 8.86621C4.39545 8.86621 3.48828 9.84982 3.48828 11.0612C3.48828 12.2721 4.39545 13.2517 5.51106 13.2517C6.62666 13.2517 7.53383 12.2716 7.53383 11.0612C7.53334 9.84982 6.62666 8.86621 5.51106 8.86621ZM5.08923 12.5028L5.24754 10.3893L4.74879 10.7337L4.5354 10.6205L5.30163 9.81359H5.95918L6.0634 12.5028H5.08923Z"
+                                                                fill="#747592" />
+                                                            <path
+                                                                d="M5.51106 14.916C4.39545 14.916 3.48828 15.8996 3.48828 17.111C3.48828 18.3214 4.39545 19.3015 5.51106 19.3015C6.62666 19.3015 7.53383 18.3214 7.53383 17.111C7.53334 15.9001 6.62666 14.916 5.51106 14.916ZM6.26389 17.9134V18.3363L4.64954 18.2901L4.70413 17.7735C4.70413 17.7735 5.94628 17.2693 5.96018 16.7343C5.98251 16.0817 5.14382 16.118 5.09866 16.5309L4.64954 16.5219C4.61331 15.6053 6.35917 15.3741 6.37257 16.6351C6.38151 17.4554 5.2932 17.8003 5.2932 17.8003L6.26389 17.9134Z"
+                                                                fill="#747592" />
+                                                            <path
+                                                                d="M5.51106 20.9614C4.39545 20.9614 3.48828 21.9455 3.48828 23.1564C3.48828 24.3673 4.39545 25.3469 5.51106 25.3469C6.62666 25.3469 7.53383 24.3673 7.53383 23.1564C7.53334 21.9455 6.62666 20.9614 5.51106 20.9614ZM5.59691 24.4035C5.13439 24.4035 4.77162 24.2492 4.68974 23.7321L5.12496 23.7053C5.12496 23.7053 5.12943 23.8596 5.27434 23.9321C5.51056 24.0542 5.95472 23.9862 5.95918 23.5916C5.96365 23.1152 5.60535 23.2011 5.52843 23.2011L5.50113 22.8522C5.50113 22.8522 5.80485 22.8477 5.80485 22.4264C5.80485 22.009 5.21528 22.0676 5.14283 22.3351L4.78006 22.3217C4.78006 22.3217 4.82075 21.814 5.5056 21.814C6.0634 21.814 6.3949 22.4755 5.98152 22.8884C5.98152 22.8884 6.44403 23.1023 6.4351 23.5777C6.42667 24.0502 6.05943 24.4035 5.59691 24.4035Z"
+                                                                fill="#747592" />
+                                                            <defs>
+                                                                <linearGradient id="paint0_linear_6147_775" x1="0"
+                                                                    y1="20.9713" x2="30.499" y2="20.9713"
+                                                                    gradientUnits="userSpaceOnUse">
+                                                                    <stop stop-color="#2E0000" />
+                                                                    <stop offset="0.1353" stop-color="#430A0A" />
+                                                                    <stop offset="0.7212" stop-color="#983436" />
+                                                                    <stop offset="0.9879" stop-color="#BA4547" />
+                                                                </linearGradient>
+                                                            </defs>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="pesan-Content">
+                                                    <p>Berhasil menambahkan rekap makanan ke jurnalmu!</p>
+                                                    <button>Lihat Jurnal</button>
+                                                </div>
+                                                <div class="pesan-time">
+                                                    <span>3 hari</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="profil">
+                                        <span>Halo, Hanifa</span>
+
+                                        <div class="profileToggle">
+                                            <i class='bx bxs-user cancel'></i>
+                                            <i class='bx bx-user search'></i>
+                                        </div>
+
+                                        <div class="popup-profile">
+                                            <div class="popupBox">
+                                                <div class="headerProfile">
+                                                    <img src="../../assets/images/profile.png" alt="Foto Profile">
+                                                    <span>Hanifa Nur Akhilah</span>
+                                                </div>
+                                                <div class="contentBox">
+                                                    <a href="#"><span>Dasboard</span></a>
+                                                    <a href="#"><span>Settings</span></a>
+                                                    <a href="./sign.html" class="reds logout"
+                                                        onclick="logout()"><span>Logout</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="startProfile">
+                                    <div class="start">
+                                        <a href="./sign.html"><span>Mulai</span></a>
+                                    </div>
+                                </div>
+
+                                <div class="btn">
+                                    <div class="btn__indicator">
+                                        <div class="btn__icon-container">
+                                            <i class="btn_icon bx "></i>
+                                        </div>
+                                    </div>
+                                    <span class="btn_text"></span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+
+                <main>
+                    <!-- Section: Rekap Aktivitas -->
+                    <section class="sec-1">
+                        <div class="food">
+                            <div class="food-content">
+                                <h1>
+                                    <span class="text1 animate1" style="--a:0;">Kelola Pola Makan</span><br>
+                                    <span class="text2 animate1" style="--a:1;">dan Kesehatan Kamu </span>
+                                </h1>
+                                <p class="animate1" style="--a:2;">Mau lebih sehat tanpa ribet? Catat makanan dan pantau
+                                    kesehatan kamu dengan cara yang simpel. </p>
+                            </div>
+                            <div class="food-image animate-image">
+                                <img src="../../assets/images/plating.png" alt="Food Tracker">
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Nutrisi Makanan -->
+                    <section class="sec-2">
+                        <div class="tracking">
+                            <div class="tracking-content">
+                                <h1><span class="text1 animate-title">Pantau</span>
+                                    <span class="text2 animate-title">Kandungan Nutrisi </span>
+                                    <span class="text3 animate-title">Makanmu </span>
+                                </h1>
+                                <button class="cta-button animate1">
+                                    <a href="./food.html#rekapmakan" class="btn1">Rekam Aktivitas Makan</a>
+                                </button>
+                            </div>
+
+                            <div class="box animate2">
+                                <div class="jurnal">
+                                    <h1>Jurnalmu</h1>
+                                    <div class="calendar">
+                                        <select>
+                                            <option value="26-31 Agustus 2024">26-31 Agustus 2024</option>
+                                            <option value="19-25 Agustus 2024">19-25 Agustus 2024</option>
+                                            <option value="12-18 Agustus 2024">12-18 Agustus 2024</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <hr>
+
+                                <div class="chart">
+                                    <ul class="numbers">
+                                        <li><span>100%</span></li>
+                                        <li><span>80%</span></li>
+                                        <li><span>60%</span></li>
+                                        <li><span>40%</span></li>
+                                        <li><span>20%</span></li>
+                                    </ul>
+                                    <ul class="bars">
+                                        <li>
+                                            <div class="bar" data-percentage="60"
+                                                data-tooltip="Kalori 213 g\nKarbo 233 g\nProtein 133 g"></div>
+                                            <span>Senin</span>
+                                        </li>
+                                        <li>
+                                            <div class="bar" data-percentage="75"
+                                                data-tooltip="Kalori 250 g\nKarbo 200 g\nProtein 150 g"></div>
+                                            <span>Selasa</span>
+                                        </li>
+                                        <li>
+                                            <div class="bar" data-percentage="50"
+                                                data-tooltip="Kalori 180 g\nKarbo 180 g\nProtein 120 g"></div>
+                                            <span>Rabu</span>
+                                        </li>
+                                        <li>
+                                            <div class="bar" data-percentage="40"
+                                                data-tooltip="Kalori 120 g\nKarbo 100 g\nProtein 80 g"></div>
+                                            <span>Kamis</span>
+                                        </li>
+                                        <li>
+                                            <div class="bar" data-percentage="90"
+                                                data-tooltip="Kalori 300 g\nKarbo 250 g\nProtein 170 g"></div>
+                                            <span>Jumat</span>
+                                        </li>
+                                        <li>
+                                            <div class="bar" data-percentage="60"
+                                                data-tooltip="Kalori 200 g\nKarbo 220 g\nProtein 130 g"></div>
+                                            <span>Sabtu</span>
+                                        </li>
+                                        <li>
+                                            <div class="bar" data-percentage="70"
+                                                data-tooltip="Kalori 220 g\nKarbo 210 g\nProtein 140 g"></div>
+                                            <span>Minggu</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- rekap makanan -->
+                    <section class="sec-3" id="rekapmakan">
+                        <div class="meal-section">
+                            <div class="form-container">
+                                <div class="meal-container animate2">
+                                    <h2 class="animate-title">Rekap Makanmu</h2>
+                                    <div class="meal-content">
+                                        <form>
+                                            <label for="tag">Tag</label>
+                                            <input type="text" id="tag" name="tag" placeholder="Sarapan">
+
+                                            <label for="meal">Apa yang Kamu Makan?</label>
+                                            <input type="text" id="meal1" name="meal1" placeholder="Telur goreng">
+                                            <input type="text" id="meal2" name="meal2" placeholder="Sayur Asem">
+                                            <input type="text" id="meal3" name="meal3" placeholder="Kerupuk">
+
+                                            <label for="date-time">Tanggal & Waktu</label>
+                                            <input type="text" id="date" name="date"
+                                                placeholder="Sabtu, 3 Februari 2024">
+                                            <input type="time" id="time" name="time" value="09:00">
+
+                                            <div class="popup-button" id="button">
+                                                <a href="#popupp" class="btn1">Batal</a>
+                                                <div class="save">
+                                                    <p>Simpan</p>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="mealtime">
+                                    <div class="datetime">
+                                        <div class="date animate1" style="--a:0;"><span>Sen</span><span>12</span></div>
+                                        <div class="date animate1" style="--a:0;"><span>Sel</span><span>13</span></div>
+                                        <div class="date animate1" style="--a:0;"><span>Rab</span><span>14</span></div>
+                                        <div class="date animate1" style="--a:0;"><span>Kam</span><span>15</span></div>
+                                        <div class="date animate1" style="--a:0;"><span>Jum</span><span>16</span></div>
+                                        <div class="date animate1" style="--a:0;"><span>Sab</span><span>17</span></div>
+                                        <div class="date animate1" style="--a:0;"><span>Min</span><span>18</span></div>
+                                    </div>
+                                    <div class="box-main">
+                                        <div class="meal-main animate3">
+                                            <div class="meal-card">
+                                                <div class="meal-header">
+                                                    <h2>Sarapan</h2>
+                                                    <h2>460 kalori</h2>
+                                                </div>
+                                                <div class="meal-food">
+                                                    <div class="meal-info">
+                                                        <h4 class="meal-name">Telur goreng</h4>
+                                                        <p class="meal-calories">220 Kalori</p>
+                                                    </div>
+                                                    <img src="../../assets/images/food.png" alt="food" class="">
+                                                </div>
+                                                <hr>
+                                                <div class="meal-food">
+                                                    <div class="meal-info">
+                                                        <h4 class="meal-name">Sayur Asem</h4>
+                                                        <p class="meal-calories">240 Kalori</p>
+                                                    </div>
+                                                    <img src="../../assets/images/food.png" alt="food" class="">
+                                                </div>
+                                                <button class="add-meal-button">Tambah Rekapan</button>
+                                            </div>
+
+                                            <div class="meal-card">
+                                                <div class="meal-header">
+                                                    <h2>Makan Siang</h2>
+                                                    <h2>370 kalori</h2>
+                                                </div>
+                                                <div class="meal-food">
+                                                    <div class="meal-info">
+                                                        <h4 class="meal-name">Kentang goreng</h4>
+                                                        <p class="meal-calories">200 Kalori</p>
+                                                    </div>
+                                                    <img src="../../assets/images/food.png" alt="food" class="">
+                                                </div>
+                                                <hr>
+                                                <div class="meal-food">
+                                                    <div class="meal-info">
+                                                        <h4 class="meal-name">Tumis Brokoli</h4>
+                                                        <p class="meal-calories">170 Kalori</p>
+                                                    </div>
+                                                    <img src="../../assets/images/buah3d.png" alt="food" class="">
+                                                </div>
+                                                <button class="add-meal-button">Tambah Rekapan</button>
+                                            </div>
+
+                                            <div class="meal-card">
+                                                <div class="meal-header">
+                                                    <h2>Makan Malam</h2>
+                                                    <h2>330 kalori</h2>
+                                                </div>
+                                                <div class="meal-food">
+                                                    <div class="meal-info">
+                                                        <h4 class="meal-name">Ayam goreng</h4>
+                                                        <p class="meal-calories">200 Kalori</p>
+                                                    </div>
+                                                    <img src="../../assets/images/food.png" alt="food" class="">
+                                                </div>
+                                                <hr>
+                                                <div class="meal-food">
+                                                    <div class="meal-info">
+                                                        <h4 class="meal-name">Oseng Mercon</h4>
+                                                        <p class="meal-calories">130 Kalori</p>
+                                                    </div>
+                                                    <img src="../../assets/images/buah3d.png" alt="food" class="">
+                                                </div>
+                                                <button class="add-meal-button">Tambah Rekapan</button>
+                                            </div>
+
+                                            <div class="meal-card">
+                                                <div class="meal-header">
+                                                    <h2>Cemilan</h2>
+                                                    <h2>260 kalori</h2>
+                                                </div>
+                                                <div class="meal-food">
+                                                    <div class="meal-info">
+                                                        <h4 class="meal-name">Salad Buah</h4>
+                                                        <p class="meal-calories">160 Kalori</p>
+                                                    </div>
+                                                    <img src="../../assets/images/food.png" alt="food" class="">
+                                                </div>
+                                                <hr>
+                                                <div class="meal-food">
+                                                    <div class="meal-info">
+                                                        <h4 class="meal-name">Rujak</h4>
+                                                        <p class="meal-calories">100 Kalori</p>
+                                                    </div>
+                                                    <img src="../../assets/images/buah3d.png" alt="food" class="">
+                                                </div>
+                                                <button class="add-meal-button">Tambah Rekapan</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- menu-favorite Section  -->
+                    <section class="sec-4">
+                        <div class="menu-favorite">
+                            <h2 class="animate-title">Menu yang Bakalan Jadi Favoritmu!</h2>
+                            <p class="animate-title">Kami udah nyiapin beberapa menu buat kamu coba nih!</p>
+
+                            <div class="container">
+                                <button class="scroll-button left-button animate2"onclick="scrollLeft()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.1364 6.2636C14.4879 6.61508 14.4879 7.18492 14.1364 7.5364L9.67279 12L14.1364 16.4636C14.4879 16.8151 14.4879 17.3849 14.1364 17.7364C13.7849 18.0879 13.2151 18.0879 12.8636 17.7364L7.7636 12.6364C7.41213 12.2849 7.41213 11.7151 7.7636 11.3636L12.8636 6.2636C13.2151 5.91213 13.7849 5.91213 14.1364 6.2636Z" fill="#EFF8FF"/>
+                                    </svg>
+                                </button>
+                                <div class="menu-cards-container">
+                                    <div class="menu-cards box-main animate1">
+                                        <div class="menu-card">
+                                            <div class="menu-info">
+                                                <img src="../../assets/images/sup.png" alt="Sup Telur Puyuh">
+                                                <div class="menu-header">
+                                                    <h3 class="menu-name">Sup Telur Puyuh</h3>
+                                                    <h4 class="menu-calories">230 Kalori</h4>
+                                                </div>
+                                            </div>
+
+                                            <div class="komposisi">
+                                                <p>Komposisi</p>
+                                            </div>
+                                            <div class="komposisi-card">
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/kubis.png" alt="Kubis">
+                                                    <h3>Kubis</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/telurpuyuh.png" alt="Telur">
+                                                    <h3>Telur</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/wortel.png" alt="Wortel">
+                                                    <h3>Wortel</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/kentang.png" alt="Kentang">
+                                                    <h3>Kentang</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/seledri.png" alt="Seledri">
+                                                    <h3>Seledri</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <p>+3 More</p>
+                                                </div>
+                                            </div>
+                                            <button>Lihat Tutorial</button>
+                                        </div>
+
+                                        <div class="menu-card animate1" style="--a:1;">
+                                            <div class="menu-info">
+                                                <img src="../../assets/images/sup.png" alt="Sup Telur Puyuh">
+                                                <div class="menu-header">
+                                                    <h3 class="menu-name">Sup Telur Puyuh</h3>
+                                                    <h4 class="menu-calories">230 Kalori</h4>
+                                                </div>
+                                            </div>
+
+                                            <div class="komposisi">
+                                                <p>Komposisi</p>
+                                            </div>
+                                            <div class="komposisi-card">
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/kubis.png" alt="Kubis">
+                                                    <h3>Kubis</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/telurpuyuh.png" alt="Telur">
+                                                    <h3>Telur</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/wortel.png" alt="Wortel">
+                                                    <h3>Wortel</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/kentang.png" alt="Kentang">
+                                                    <h3>Kentang</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/seledri.png" alt="Seledri">
+                                                    <h3>Seledri</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <p>+3 More</p>
+                                                </div>
+                                            </div>
+                                            <button>Lihat Tutorial</button>
+                                        </div>
+
+                                        <div class="menu-card animate1" style="--a:2;">
+                                            <div class="menu-info">
+                                                <img src="../../assets/images/sup.png" alt="Sup Telur Puyuh">
+                                                <div class="menu-header">
+                                                    <h3 class="menu-name">Nugget Tahu Sayur</h3>
+                                                    <h4 class="menu-calories">280 Kalori</h4>
+                                                </div>
+                                            </div>
+
+                                            <div class="komposisi">
+                                                <p>Komposisi</p>
+                                            </div>
+                                            <div class="komposisi-card">
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/tahu.png" alt="Kubis">
+                                                    <h3>Tahu</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/telur.png" alt="Telur">
+                                                    <h3>Telur</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/wortel.png" alt="Wortel">
+                                                    <h3>Wortel</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/brokoli.png" alt="Kentang">
+                                                    <h3>Brokoli</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/bombai.png" alt="Seledri">
+                                                    <h3>Bombai</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <p>+3 More</p>
+                                                </div>
+                                            </div>
+                                            <button>Lihat Tutorial</button>
+                                        </div>
+                                        <div class="menu-card animate1" style="--a:3;">
+                                            <div class="menu-info">
+                                                <img src="../../assets/images/sup.png" alt="Sup Telur Puyuh">
+                                                <div class="menu-header">
+                                                    <h3 class="menu-name">Smoothies</h3>
+                                                    <h4 class="menu-calories">190 Kalori</h4>
+                                                </div>
+                                            </div>
+
+                                            <div class="komposisi">
+                                                <p>Komposisi</p>
+                                            </div>
+                                            <div class="komposisi-card">
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/stroberi.png" alt="Kubis">
+                                                    <h3>Stroberi</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/pisang.png" alt="Telur">
+                                                    <h3>Pisang</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/susu.png" alt="Wortel">
+                                                    <h3>Susu</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/yoghurt.png" alt="Kentang">
+                                                    <h3>Yoghurt</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/esbatu.png" alt="Seledri">
+                                                    <h3>Es Batu</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <p>+3 More</p>
+                                                </div>
+                                            </div>
+                                            <button>Lihat Tutorial</button>
+                                        </div>
+
+                                        <div class="menu-card animate1" style="--a:4;">
+                                            <div class="menu-info">
+                                                <img src="../../assets/images/sup.png" alt="Sup Telur Puyuh">
+                                                <div class="menu-header">
+                                                    <h3 class="menu-name">Sup Telur Puyuh</h3>
+                                                    <h4 class="menu-calories">230 Kalori</h4>
+                                                </div>
+                                            </div>
+
+                                            <div class="komposisi">
+                                                <p>Komposisi</p>
+                                            </div>
+                                            <div class="komposisi-card">
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/kubis.png" alt="Kubis">
+                                                    <h3>Kubis</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/telurpuyuh.png" alt="Telur">
+                                                    <h3>Telur</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/wortel.png" alt="Wortel">
+                                                    <h3>Wortel</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/kentang.png" alt="Kentang">
+                                                    <h3>Kentang</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/seledri.png" alt="Seledri">
+                                                    <h3>Seledri</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <p>+3 More</p>
+                                                </div>
+                                            </div>
+                                            <button>Lihat Tutorial</button>
+                                        </div>
+
+                                        <div class="menu-card animate1" style="--a:5;">
+                                            <div class="menu-info">
+                                                <img src="../../assets/images/sup.png" alt="Sup Telur Puyuh">
+                                                <div class="menu-header">
+                                                    <h3 class="menu-name">Sup Telur Puyuh</h3>
+                                                    <h4 class="menu-calories">230 Kalori</h4>
+                                                </div>
+                                            </div>
+
+                                            <div class="komposisi">
+                                                <p>Komposisi</p>
+                                            </div>
+                                            <div class="komposisi-card">
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/kubis.png" alt="Kubis">
+                                                    <h3>Kubis</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/telurpuyuh.png" alt="Telur">
+                                                    <h3>Telur</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/wortel.png" alt="Wortel">
+                                                    <h3>Wortel</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/kentang.png" alt="Kentang">
+                                                    <h3>Kentang</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <img src="../../assets/images/seledri.png" alt="Seledri">
+                                                    <h3>Seledri</h3>
+                                                </div>
+                                                <div class="komposisi-info">
+                                                    <p>+3 More</p>
+                                                </div>
+                                            </div>
+                                            <button>Lihat Tutorial</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="scroll-button right-button animate2"
+                                    onclick="scrollRight()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.86321 6.2636C10.2147 5.91213 10.7845 5.91213 11.136 6.2636L16.236 11.3636C16.5875 11.7151 16.5875 12.2849 16.236 12.6364L11.136 17.7364C10.7845 18.0879 10.2147 18.0879 9.86321 17.7364C9.51174 17.3849 9.51174 16.8151 9.86321 16.4636L14.3268 12L9.86321 7.5364C9.51174 7.18492 9.51174 6.61508 9.86321 6.2636Z" fill="#EFF8FF"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+
+                <footer>
+                    <div class="footer">
+                        <div class="main-footer">
+                            <div class="footer-container">
+                                <div class="footer-section about">
+                                    <div class="logo-container">
+                                        <img src="../../assets/images/logo-desain.png" alt="Logo" class="logo">
+                                        <h1>NutriTrack</h1>
+                                    </div>
+                                    <p>Lacak aktivitas, pola makan, hingga kesehatan untuk mencapai gaya hidup yang
+                                        lebih sehat.</p>
+                                    <div class="social-icons">
+                                        <a href="#"><i class='bx bxl-facebook'></i></i></a>
+                                        <a href="#"><i class='bx bxl-twitter'></i></i></a>
+                                        <a href="#"><i class='bx bxl-instagram-alt'></i></i></a>
+                                        <a href="#"><i class='bx bxl-linkedin'></i></i></a>
+                                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                                    </div>
+                                </div>
+                                <div class="footer-section links animate1" style="--a:1;">
+                                    <h2>Product</h2>
+                                    <ul>
+                                        <li><a href="#">Features</a></li>
+                                        <li><a href="#">Pricing</a></li>
+                                        <li><a href="#">Case studies</a></li>
+                                        <li><a href="#">Reviews</a></li>
+                                        <li><a href="#">Updates</a></li>
+                                    </ul>
+                                </div>
+                                <div class="footer-section links animate1" style="--a:2;">
+                                    <h2>Support</h2>
+                                    <ul>
+                                        <li><a href="#">Getting started</a></li>
+                                        <li><a href="#">Help center</a></li>
+                                        <li><a href="#">Server status</a></li>
+                                        <li><a href="#">Report a bug</a></li>
+                                        <li><a href="#">Chat support</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="footer-section contact animate1" style="--a:3;">
+                                    <h2>Contacts us</h2>
+                                    <ul>
+                                        <li><a href="mailto:contact@company.com"><i class='bx bx-envelope'></i>
+                                                contact@naxdesigners.com</a></li>
+                                        <li><a href="tel:+14146875892"><i class='bx bx-phone'></i> +62 888 143127119</a>
+                                        </li>
+                                        <li><a href="https://maps.app.goo.gl/JkPu5CWncLRmG48MA" target="_blank"><i
+                                                    class='bx bx-map'></i> Jl. Simpang Lima, Kota Semarang</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer-bottom">
+                                <p class="animate2">Copyright &copy; 2024 N4x D3sign3rs</p>
+                                <p class="animate2"> All Rights Reserved |
+                                    <a href="#">Terms and Conditions |</a>
+                                    <a href="#">Privacy Policy</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <div class="loader-container">
+            <div class="container">
+                <div class="loader">
+                    <span style="--i:0;"></span>
+                    <span style="--i:1;"></span>
+                    <span style="--i:2;"></span>
+                    <span style="--i:3;"></span>
+                    <span style="--i:4;"></span>
+                    <span style="--i:5;"></span>
+                    <span style="--i:6;"></span>
+                    <span class="rotate" style="--j:0;"></span>
+                    <span class="rotate" style="--j:1;"></span>
+                    <span class="rotate" style="--j:2;"></span>
+                    <span class="rotate" style="--j:3;"></span>
+                </div>
+            </div>
+        </div>
+        <svg style="width: 0;height: 0;">
+            <filter id="Gooey">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+                <feColorMatrix Values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 20 -10 
+                " />
+            </filter>
+        </svg>
+        <div id="progress">
+            <span id="progress_value"><i class='bx bxs-chevrons-up bx-flashing'></i></span>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $('.bars li .bar').each(function (key, bar) {
+                var percentage = $(this).data('percentage');
+                $(this).animate({
+                    'height': percentage + '%'
+                }, 1000);
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var bars = document.querySelectorAll('.bar');
+
+            bars.forEach(function (bar) {
+                var tooltip = document.createElement('div');
+                tooltip.className = 'tooltip';
+                tooltip.textContent = bar.getAttribute('data-tooltip').replace(/\\n/g, '\n');
+                bar.appendChild(tooltip);
+
+                bar.addEventListener('mouseover', function () {
+                    tooltip.style.opacity = 1;
+                });
+
+                bar.addEventListener('mouseout', function () {
+                    tooltip.style.opacity = 0;
+                });
+            });
+        });
+
+        function logout() {
+            localStorage.removeItem('isLoggedIn');
+            window.location.href = './sign.html';
+        }
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+            if (isLoggedIn === 'true') {
+                document.querySelector('.profileBox').style.display = 'flex';
+                document.querySelector('.startProfile').style.display = 'none';
+            } else {
+                document.querySelector('.profileBox').style.display = 'none';
+                document.querySelector('.startProfile').style.display = 'block';
+            }
+        });
+
+    </script>
+    <script src="../js/food.js"></script>
+
+</body>
+
+</html>

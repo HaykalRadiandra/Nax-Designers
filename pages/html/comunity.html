@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/comunity.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>Nutritrack</title>
+</head>
+
+<body>
+    <div class="app-frame">
+        <div class="app-container">
+            <div class="main-container">
+
+                <header class="header">
+                    <nav>
+                        <div class="nav-bar">
+                            <i class='bx bx-menu sidebarOpen'></i>
+                            <span class="logo-navbar"><a href="../../index.html"><img src="../../../assets/images/logo-desain.png" alt="Logo Web"></a></span>
+
+                            <div class="menu">
+                                <div class="logo-toggle">
+                                    <span class="logo navLogo"><a href="../../index.html"><img src="../../../assets/images/logo-desain.png" alt="Logo Web"></a></span>
+                                    <i class='bx bx-x sidebarClose'></i>
+                                </div>
+
+                                <div class="border-navlinks">
+                                    <ul class="nav-links">
+                                        <li><a href="../../index.html" class="navbar-link">Home</a></li>
+                                        <li class="dropdown">
+                                            <div class="dropbtn">
+                                                Jurnal <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                                            </div>
+                                            <ul class="dropdown-content">
+                                                <li>
+                                                    <a href="./activity.html" class="navbar-link">
+                                                        <i class='bx bx-history'></i>
+                                                        <span>Riwayat Aktivitas</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./food.html" class="navbar-link">
+                                                        <i class='bx bx-restaurant'></i>
+                                                        <span>Rekap Makanan</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="./statistik.html" class="navbar-link">Statistik</a></li>
+                                        <li><a href="./comunity.html" class="navbar-link">Komunitas</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="darkLigth-profile">
+
+                                <div class="profileBox">
+                                    <div class="notif">
+                                        <i class='bx bxs-bell cancel'></i>
+                                        <i class='bx bx-bell search'></i>
+                                    </div>
+
+                                    <div class="view-notif">
+                                        <div class="title">
+                                            <span>
+                                                <h3>Notifikasi</h3>
+                                            </span>
+                                        </div>
+                                        <div class="tab">
+                                            <button class="tablinks"
+                                                onclick="openNotif(event, 'SemuaNotif')">Semua</button>
+                                            <button class="tablinks"
+                                                onclick="openNotif(event, 'Aktivitas')">Aktivitas</button>
+                                            <button class="tablinks" onclick="openNotif(event, 'Update')">Update
+                                                <span>Informasi</span></button>
+                                        </div>
+
+                                        <div id="SemuaNotif" class="tabcontent">
+                                        </div>
+
+                                        <div id="Aktivitas" class="tabcontent">
+                                            <div class="pesanBox">
+                                                <div class="pesan-Icon">
+                                                    <div class="circle-svg">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="45"
+                                                            viewBox="0 0 40 36" fill="none">
+                                                            <path
+                                                                d="M34.9679 9.5959H29.0868H25.0526L6.14232 0.254883V15.7346L6.14062 31.2165L25.0526 21.8721H29.0868H34.9679L39.9991 19.5084V11.9647L34.9679 9.5959Z"
+                                                                fill="#00A8E6" />
+                                                            <path
+                                                                d="M27.6055 21.8721V35.3121L31.3968 35.2315L33.9837 21.8721H27.6055Z"
+                                                                fill="#FF4000" />
+                                                            <path d="M27.6039 21.8721H25.9492V25.2418H27.6039V21.8721Z"
+                                                                fill="#FEA621" />
+                                                            <path d="M38.2252 12.7881H34.8555V14.1717H38.2252V12.7881Z"
+                                                                fill="#DEC7BC" />
+                                                            <path d="M38.2252 15.0444H34.8555V16.4286H38.2252V15.0444Z"
+                                                                fill="#DEC7BC" />
+                                                            <path d="M38.2252 17.3008H34.8555V18.685H38.2252V17.3008Z"
+                                                                fill="#DEC7BC" />
+                                                            <path
+                                                                d="M5.70076 15.7394C5.70076 19.688 5.2482 23.3987 4.44282 26.6472C4.01111 28.4057 3.474 30.0271 2.85292 31.4694C1.07929 27.3529 0 21.8206 0 15.74C0 9.65486 1.07929 4.12262 2.85292 0.000488281C3.47457 1.44836 4.01111 3.06926 4.44282 4.82767C5.2482 8.07511 5.70076 11.792 5.70076 15.7394Z"
+                                                                fill="#CCCCCC" />
+                                                            <path
+                                                                d="M8.88033 15.7401C8.88033 17.2037 8.81664 18.6347 8.69491 20.0189C8.31843 24.3974 7.37497 28.342 6.03305 31.47H2.85212C3.47264 30.0278 4.00806 28.4057 4.44259 26.6451C4.91432 24.7525 5.25924 22.7061 5.46551 20.543C5.61938 18.9954 5.69884 17.3891 5.69884 15.7401C5.69884 14.494 5.65657 13.2749 5.56583 12.0818C5.38041 9.49488 4.99322 7.05113 4.44202 4.82944C4.00749 3.06934 3.47208 1.44731 2.85156 0H6.03249C7.49614 3.42553 8.49258 7.8148 8.78339 12.6871C8.8482 13.6835 8.88033 14.7059 8.88033 15.7401Z"
+                                                                fill="#F2F2F2" />
+                                                            <path
+                                                                d="M5.70177 15.7395C5.70177 19.688 5.2492 23.3987 4.44383 26.6473C3.63338 23.3993 3.17969 19.688 3.17969 15.7395C3.17969 11.792 3.63338 8.07458 4.44383 4.82715C5.2492 8.07514 5.70177 11.792 5.70177 15.7395Z"
+                                                                fill="#C9330A" />
+                                                            <path
+                                                                d="M5.69834 15.7398C5.69834 17.3889 5.61888 18.9952 5.46501 20.5428C3.5409 20.0981 2.10938 18.3803 2.10938 16.3232C2.10938 14.2339 3.59389 12.4851 5.56534 12.0815C5.65551 13.2747 5.69834 14.4937 5.69834 15.7398Z"
+                                                                fill="#FEA621" />
+                                                        </svg>
+                                                    </div>
+                                                    <!-- <i class='bx bxs-message'></i> -->
+                                                </div>
+                                                <div class="pesan-Content">
+                                                    <p>Selesaikan target <b>Lari 10 km</b> untuk mendapatkan <b>Waktu
+                                                            main HP bertambah 2 jam.</b></p>
+                                                    <button>Lihat Tantangan</button>
+                                                </div>
+                                                <div class="pesan-time">
+                                                    <span>1 menit</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="Update" class="tabcontent">
+                                            <div class="pesanBox">
+                                                <div class="pesan-Icon">
+                                                    <div class="circle-svg">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="40"
+                                                            viewBox="0 0 31 40" fill="none">
+                                                            <path
+                                                                d="M30.499 39.9999H0L0.944888 1.94287H30.2722L30.499 39.9999Z"
+                                                                fill="url(#paint0_linear_6147_775)" />
+                                                            <path
+                                                                d="M26.9838 3.26553L26.4171 38.4696L1.25 38.0443L2.44054 3.18018L26.9838 3.26553Z"
+                                                                fill="#F2F2F2" />
+                                                            <path
+                                                                d="M26.9847 3.26562H28.4591L27.8919 38.4697H26.418L26.9847 3.26562Z"
+                                                                fill="#B3B3B3" />
+                                                            <path
+                                                                d="M20.7524 1.95137H19.3783C19.3281 1.69828 19.2284 1.50771 19.0835 1.4164C18.9654 1.34444 18.8249 1.33947 18.7028 1.40746C18.5391 1.49828 18.4398 1.69828 18.4304 1.95137C18.4259 1.97023 18.4259 1.99207 18.4259 2.01539V6.34183H7.36914V2.01539C7.36914 1.33948 7.71355 0.740984 8.29418 0.418908C8.88374 0.0878989 9.61821 0.0923639 10.1671 0.428335C10.6748 0.736516 10.9606 1.28985 10.9606 1.95137H9.59985C9.60432 1.76577 9.55469 1.64319 9.45494 1.58513C9.3279 1.5082 9.11897 1.51664 8.96017 1.60696C8.80632 1.69331 8.72891 1.82482 8.72891 2.01539V4.98107H17.0642V2.01539C17.0642 1.99207 17.0642 1.9747 17.0691 1.95137C17.0825 1.19457 17.4453 0.550418 18.0438 0.218913C18.5971 -0.0892676 19.273 -0.0704159 19.8036 0.265059C20.3356 0.600534 20.6666 1.19903 20.7524 1.95137Z"
+                                                                fill="#B0B7CE" />
+                                                            <path
+                                                                d="M8.61719 10.1816V11.599L24.6039 11.9389V10.1816H8.61719Z"
+                                                                fill="#747592" />
+                                                            <path
+                                                                d="M8.61719 16.0391V17.6941L24.1964 18.175L24.4004 16.0391H8.61719Z"
+                                                                fill="#747592" />
+                                                            <path
+                                                                d="M8.61719 22.313V24.0698H24.4004L24.0947 22.313H8.61719Z"
+                                                                fill="#747592" />
+                                                            <path
+                                                                d="M5.51106 8.86621C4.39545 8.86621 3.48828 9.84982 3.48828 11.0612C3.48828 12.2721 4.39545 13.2517 5.51106 13.2517C6.62666 13.2517 7.53383 12.2716 7.53383 11.0612C7.53334 9.84982 6.62666 8.86621 5.51106 8.86621ZM5.08923 12.5028L5.24754 10.3893L4.74879 10.7337L4.5354 10.6205L5.30163 9.81359H5.95918L6.0634 12.5028H5.08923Z"
+                                                                fill="#747592" />
+                                                            <path
+                                                                d="M5.51106 14.916C4.39545 14.916 3.48828 15.8996 3.48828 17.111C3.48828 18.3214 4.39545 19.3015 5.51106 19.3015C6.62666 19.3015 7.53383 18.3214 7.53383 17.111C7.53334 15.9001 6.62666 14.916 5.51106 14.916ZM6.26389 17.9134V18.3363L4.64954 18.2901L4.70413 17.7735C4.70413 17.7735 5.94628 17.2693 5.96018 16.7343C5.98251 16.0817 5.14382 16.118 5.09866 16.5309L4.64954 16.5219C4.61331 15.6053 6.35917 15.3741 6.37257 16.6351C6.38151 17.4554 5.2932 17.8003 5.2932 17.8003L6.26389 17.9134Z"
+                                                                fill="#747592" />
+                                                            <path
+                                                                d="M5.51106 20.9614C4.39545 20.9614 3.48828 21.9455 3.48828 23.1564C3.48828 24.3673 4.39545 25.3469 5.51106 25.3469C6.62666 25.3469 7.53383 24.3673 7.53383 23.1564C7.53334 21.9455 6.62666 20.9614 5.51106 20.9614ZM5.59691 24.4035C5.13439 24.4035 4.77162 24.2492 4.68974 23.7321L5.12496 23.7053C5.12496 23.7053 5.12943 23.8596 5.27434 23.9321C5.51056 24.0542 5.95472 23.9862 5.95918 23.5916C5.96365 23.1152 5.60535 23.2011 5.52843 23.2011L5.50113 22.8522C5.50113 22.8522 5.80485 22.8477 5.80485 22.4264C5.80485 22.009 5.21528 22.0676 5.14283 22.3351L4.78006 22.3217C4.78006 22.3217 4.82075 21.814 5.5056 21.814C6.0634 21.814 6.3949 22.4755 5.98152 22.8884C5.98152 22.8884 6.44403 23.1023 6.4351 23.5777C6.42667 24.0502 6.05943 24.4035 5.59691 24.4035Z"
+                                                                fill="#747592" />
+                                                            <defs>
+                                                                <linearGradient id="paint0_linear_6147_775" x1="0"
+                                                                    y1="20.9713" x2="30.499" y2="20.9713"
+                                                                    gradientUnits="userSpaceOnUse">
+                                                                    <stop stop-color="#2E0000" />
+                                                                    <stop offset="0.1353" stop-color="#430A0A" />
+                                                                    <stop offset="0.7212" stop-color="#983436" />
+                                                                    <stop offset="0.9879" stop-color="#BA4547" />
+                                                                </linearGradient>
+                                                            </defs>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="pesan-Content">
+                                                    <p>Berhasil menambahkan rekap makanan ke jurnalmu!</p>
+                                                    <button>Lihat Jurnal</button>
+                                                </div>
+                                                <div class="pesan-time">
+                                                    <span>3 hari</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="profil">
+                                        <span>Halo, Hanifa</span>
+
+                                        <div class="profileToggle">
+                                            <i class='bx bxs-user cancel'></i>
+                                            <i class='bx bx-user search'></i>
+                                        </div>
+
+                                        <div class="popup-profile">
+                                            <div class="popupBox">
+                                                <div class="headerProfile">
+                                                    <img src="../../assets/images/profile.png" alt="Foto Profile">
+                                                    <span>Hanifa Nur Akhilah</span>
+                                                </div>
+                                                <div class="contentBox">
+                                                    <a href="#"><span>Dasboard</span></a>
+                                                    <a href="#"><span>Settings</span></a>
+                                                    <a href="./sign.html" class="reds logout"
+                                                        onclick="logout()"><span>Logout</span></a>
+                                                </div>
+                                            </div>
+                                            <!-- <input type="text" placeholder="Search..."> -->
+                                            <!-- <i class='bx bxs-user'></i> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="startProfile">
+                                    <div class="start">
+                                        <a href="./sign.html"><span>Mulai</span></a>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="darklightBox">
+                                    <div class="dark-light">
+                                        <i class='bx bx-moon moon'></i>
+                                        <i class='bx bx-sun sun'></i>
+                                    </div>
+                                </div> -->
+
+                                <div class="btn">
+                                    <div class="btn__indicator">
+                                        <div class="btn__icon-container">
+                                            <i class="btn_icon bx "></i>
+                                        </div>
+                                    </div>
+                                    <span class="btn_text"></span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+
+                <main>
+                    <!-- Tips Section -->
+                    <section class="sec-1">
+                        <div class="tips">
+                            <div class="tips-content">
+                                <h1 class="animate1" style="--a:0;"><span class="text1">Butuh Solusi dari Ahlinya? </span><br>
+                                    <span class="text2">Kami di Sini untuk Kamu!</span>
+                                </h1>
+                                <p class="animate1" style="--a:1;">Jangan simpan pertanyaan seputar kesehatan sendirian. Hubungi dokter atau ahli kesehatan kami yang siapkan untuk membantu dengan solusi terbaik.</p>
+                                <button class="cta-button animate1" style="--a:2;">
+                                    <a href="./food.html" target="_blank" class="btn1">Mulai</a>
+                                </button>
+                            </div>
+
+                            <div class="tips-doctor">
+                                <div class="tips-image animate-image">
+                                    <img src="../../../assets/images/doctor.png" alt="Dokter Profesional">
+                                </div>
+                                <div class="doctor-card animate3">
+                                    <div class="check-image">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18ZM13.8566 8.19113C14.1002 7.85614 14.0261 7.38708 13.6911 7.14345C13.3561 6.89982 12.8871 6.97388 12.6434 7.30887L9.15969 12.099L7.28033 10.2197C6.98744 9.92678 6.51256 9.92678 6.21967 10.2197C5.92678 10.5126 5.92678 10.9874 6.21967 11.2803L8.71967 13.7803C8.87477 13.9354 9.08999 14.0149 9.30867 13.9977C9.52734 13.9805 9.72754 13.8685 9.85655 13.6911L13.8566 8.19113Z"
+                                                fill="#207522" />
+                                        </svg>
+                                        <h2>Dokter Profesional</h2>
+                                    </div>
+                                    <div class="check-info">
+                                        <p>Kamu bisa berkonsultasi dengan dokter yang ahli di bidangnya.</p>
+                                    </div>
+                                </div>
+                                <div class="available-doctors animate2">
+                                    <div class="title-doctors">
+                                        <h3>Dokter Tersedia</h3>
+                                        <p>Pilih dokter</p>
+                                    </div>
+                                    <li>
+                                        <img src="../../assets/images/docter0.png" alt="dr. Hanifa Akhilah">
+                                        <div class="doctor-info">
+                                            <h4>dr. Hanifa Akhilah</h4>
+                                            <p>Dokter Gizi</p>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18ZM13.8566 8.19113C14.1002 7.85614 14.0261 7.38708 13.6911 7.14345C13.3561 6.89982 12.8871 6.97388 12.6434 7.30887L9.15969 12.099L7.28033 10.2197C6.98744 9.92678 6.51256 9.92678 6.21967 10.2197C5.92678 10.5126 5.92678 10.9874 6.21967 11.2803L8.71967 13.7803C8.87477 13.9354 9.08999 14.0149 9.30867 13.9977C9.52734 13.9805 9.72754 13.8685 9.85655 13.6911L13.8566 8.19113Z"
+                                                fill="#207522" />
+                                        </svg>
+                                    </li>
+                                    <li>
+                                        <img src="../../assets/images/docter1.png" alt="dr. Nayla Audyna">
+                                        <div class="doctor-info">
+                                            <h4>dr. Nayla Audyna</h4>
+                                            <p>Dokter Hati</p>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18ZM13.8566 8.19113C14.1002 7.85614 14.0261 7.38708 13.6911 7.14345C13.3561 6.89982 12.8871 6.97388 12.6434 7.30887L9.15969 12.099L7.28033 10.2197C6.98744 9.92678 6.51256 9.92678 6.21967 10.2197C5.92678 10.5126 5.92678 10.9874 6.21967 11.2803L8.71967 13.7803C8.87477 13.9354 9.08999 14.0149 9.30867 13.9977C9.52734 13.9805 9.72754 13.8685 9.85655 13.6911L13.8566 8.19113Z"
+                                                fill="#207522" />
+                                        </svg>
+                                    </li>
+                                    <li>
+                                        <img src="../../assets/images/docter3.png" alt="dr. Haykal Tandra">
+                                        <div class="doctor-info">
+                                            <h4>dr. Haykal Tandra</h4>
+                                            <p>Dokter Akupunktur</p>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18ZM13.8566 8.19113C14.1002 7.85614 14.0261 7.38708 13.6911 7.14345C13.3561 6.89982 12.8871 6.97388 12.6434 7.30887L9.15969 12.099L7.28033 10.2197C6.98744 9.92678 6.51256 9.92678 6.21967 10.2197C5.92678 10.5126 5.92678 10.9874 6.21967 11.2803L8.71967 13.7803C8.87477 13.9354 9.08999 14.0149 9.30867 13.9977C9.52734 13.9805 9.72754 13.8685 9.85655 13.6911L13.8566 8.19113Z"
+                                                fill="#207522" />
+                                        </svg>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Konsultasi Section -->
+                    <section class="sec-2">
+                        <div class="konsultasi-section">
+                            <h2 class="animate-title">Pilih Dokter dan Konsultasikan Kesehatanmu</h2>
+                            <p class="animate-title">Ada keluhan? Konsultasiin aja bareng dokter profesional pilihanmu!</p>
+                            <div class="konsultasi-container animate-card" style="--a:0;">
+                                <div class="konsultasi-box animate-card" style="--a:0;">
+                                    <div class="content-konsultasi">
+                                        <img src="../../assets/images/docter0.png" alt="Icon">
+                                        <div class="isi-content">
+                                            <h3>dr. Hanifa Akhilah</h3>
+                                            <p>Dokter Gizi</p>
+                                        </div>
+                                    </div>
+                                    <button class="cta-button">
+                                        <a href="#" target="_blank" class="btn1">Konsultasi</a>
+                                    </button>
+                                </div>
+                                <div class="konsultasi-box animate-card" style="--a:1;">
+                                    <div class="content-konsultasi">
+                                        <img src="../../assets/images/docter1.png" alt="Icon">
+                                        <div class="isi-content">
+                                            <h3>dr. Nayla Audyna</h3>
+                                            <p>Dokter Hati</p>
+                                        </div>
+                                    </div>
+                                    <button class="cta-button">
+                                        <a href="#" target="_blank" class="btn1">Konsultasi</a>
+                                    </button>
+                                </div>
+                                <div class="konsultasi-box animate-card" style="--a:2;">
+                                    <div class="content-konsultasi">
+                                        <img src="../../assets/images/docter3.png" alt="Icon">
+                                        <div class="isi-content">
+                                            <h3>dr. Haykal Tandra</h3>
+                                            <p>Dokter Akupunktur</p>
+                                        </div>
+                                    </div>
+                                    <button class="cta-button">
+                                        <a href="#" target="_blank" class="btn1">Konsultasi</a>
+                                    </button>
+                                </div>
+                                <div class="konsultasi-box animate-card" style="--a:3;">
+                                    <div class="content-konsultasi">
+                                        <img src="../../assets/images/docter2.png" alt="Icon">
+                                        <div class="isi-content">
+                                            <h3>dr. Salma Fitria</h3>
+                                            <p>Dokter Gizi</p>
+                                        </div>
+                                    </div>
+                                    <button class="cta-button">
+                                        <a href="#" target="_blank" class="btn1">Konsultasi</a>
+                                    </button>
+                                </div>
+                                <div class="konsultasi-box animate-card" style="--a:4;">
+                                    <div class="content-konsultasi">
+                                        <img src="../../assets/images/docter4.png" alt="Icon">
+                                        <div class="isi-content">
+                                            <h3>dr. Raffli Putra</h3>
+                                            <p>Dokter Penyakit Dalam</p>
+                                        </div>
+                                    </div>
+                                    <button class="cta-button">
+                                        <a href="#" target="_blank" class="btn1">Konsultasi</a>
+                                    </button>
+                                </div>
+                                <div class="konsultasi-box animate-card" style="--a:5;">
+                                    <div class="content-konsultasi">
+                                        <img src="../../assets/images/docter0.png" alt="Icon">
+                                        <div class="isi-content">
+                                            <h3>dr. Siti Halimah</h3>
+                                            <p>Dokter Jiwa</p>
+                                        </div>
+                                    </div>
+                                    <button class="cta-button">
+                                        <a href="#" target="_blank" class="btn1">Konsultasi</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section 1: Pahami Kebutuhan Nutrisimu -->
+                    <section class="sec-3">
+                        <div class="comunity-section">
+                            <div class="title-comunity animate-title">
+                                <h2>Komunitas Pendukung untuk Langkah Sehatmu</h2>
+                                <p>Bagikan pengalamanmu dan tambah wawasanmu untuk peroleh kesehatan maksimal</p>
+                            </div>
+                            <!-- Konten Bagikan Pengalaman -->
+                            <div class="comunity-content animate2">
+                                <div class="comunity-media">
+                                    <div class="content-media">
+                                        <div class="profile-pictured"><img src="../../assets/images/pprofile.png" alt="Foto Person"></div>
+                                        <div class="media-options">
+                                            <input type="text" placeholder="Bagikan pengalamanmu">
+                                            <div class="media-button">
+                                                <a>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M2.25 15.75L7.40901 10.591C8.28769 9.71231 9.71231 9.71231 10.591 10.591L15.75 15.75M14.25 14.25L15.659 12.841C16.5377 11.9623 17.9623 11.9623 18.841 12.841L21.75 15.75M3.75 19.5H20.25C21.0784 19.5 21.75 18.8284 21.75 18V6C21.75 5.17157 21.0784 4.5 20.25 4.5H3.75C2.92157 4.5 2.25 5.17157 2.25 6V18C2.25 18.8284 2.92157 19.5 3.75 19.5ZM14.25 8.25H14.2575V8.2575H14.25V8.25ZM14.625 8.25C14.625 8.45711 14.4571 8.625 14.25 8.625C14.0429 8.625 13.875 8.45711 13.875 8.25C13.875 8.04289 14.0429 7.875 14.25 7.875C14.4571 7.875 14.625 8.04289 14.625 8.25Z" stroke="#EFF8FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                    Media
+                                                </a>
+                                                <a>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M13.1903 8.68842C13.6393 8.90291 14.0601 9.19611 14.432 9.56802C16.1893 11.3254 16.1893 14.1746 14.432 15.932L9.93198 20.432C8.17462 22.1893 5.32538 22.1893 3.56802 20.432C1.81066 18.6746 1.81066 15.8254 3.56802 14.068L5.32499 12.311M18.675 11.689L20.432 9.93198C22.1893 8.17462 22.1893 5.32538 20.432 3.56802C18.6746 1.81066 15.8254 1.81066 14.068 3.56802L9.56802 8.06802C7.81066 9.82538 7.81066 12.6746 9.56802 14.432C9.93992 14.8039 10.3607 15.0971 10.8097 15.3116" stroke="#EFF8FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                    Link
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Konten Kartu -->
+                            <div class="content-cards">
+                                <!-- Card 1 -->
+                                <div class="card animate1" style="--a:0;">
+                                    <div class="card-header">
+                                        <div class="profile-picture"><img src="../../assets/images/person1.png" alt="Foro Orang"></div>
+                                        <div class="profile-info">
+                                            <h4>Kaliya Annura</h4>
+                                            <p>2 jam yang lalu</p>
+                                        </div>
+                                    </div>
+                                    <div class="content-body">
+                                        <div class="card-image"><img src="../../assets/images/bg-ulas1.png" alt="Ulasan"></div>
+                                        <div class="card-body">
+                                            <h3>Cara Menjaga Kesehatan Tubuh Agar Terhindar dari PenyakitApa Itu Bikarbonat Dan Apa Manfaatnya Untuk Tubuh</h3>
+                                            <p>Bikarbonat adalah ion yang sangat penting dalam tubuh manusia dan berperan dalam berbagai fungsi biologis yang mendukung kesehatan. Bikarbonat memiliki...</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-interactions">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M17.5 6.875C17.5 4.80393 15.7511 3.125 13.5938 3.125C11.9807 3.125 10.5961 4.06356 10 5.40285C9.40393 4.06356 8.01927 3.125 6.40625 3.125C4.24889 3.125 2.5 4.80393 2.5 6.875C2.5 12.8921 10 16.875 10 16.875C10 16.875 17.5 12.8921 17.5 6.875Z" stroke="#9E9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span>127</span>
+                                        </div>
+                                        <div class="card-interactions">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M7.1875 8.125C7.1875 8.29759 7.04759 8.4375 6.875 8.4375C6.70241 8.4375 6.5625 8.29759 6.5625 8.125C6.5625 7.95241 6.70241 7.8125 6.875 7.8125C7.04759 7.8125 7.1875 7.95241 7.1875 8.125ZM7.1875 8.125H6.875M10.3125 8.125C10.3125 8.29759 10.1726 8.4375 10 8.4375C9.82741 8.4375 9.6875 8.29759 9.6875 8.125C9.6875 7.95241 9.82741 7.8125 10 7.8125C10.1726 7.8125 10.3125 7.95241 10.3125 8.125ZM10.3125 8.125H10M13.4375 8.125C13.4375 8.29759 13.2976 8.4375 13.125 8.4375C12.9524 8.4375 12.8125 8.29759 12.8125 8.125C12.8125 7.95241 12.9524 7.8125 13.125 7.8125C13.2976 7.8125 13.4375 7.95241 13.4375 8.125ZM13.4375 8.125H13.125M1.875 10.6328C1.875 11.967 2.81118 13.1284 4.13122 13.3225C5.03631 13.4555 5.95126 13.5583 6.875 13.6297V17.5L10.3612 14.0138C10.5335 13.8415 10.7661 13.7435 11.0097 13.7375C12.656 13.6967 14.2776 13.5565 15.8687 13.3226C17.1888 13.1285 18.125 11.9671 18.125 10.6329V5.61713C18.125 4.28288 17.1888 3.12152 15.8687 2.92745C13.9534 2.64584 11.9938 2.5 10.0002 2.5C8.00647 2.5 6.04676 2.64587 4.13122 2.92752C2.81118 3.12161 1.875 4.28297 1.875 5.6172V10.6328Z" stroke="#9E9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span> 27</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 2 -->
+                                <div class="card animate1" style="--a:1;">
+                                    <div class="card-header">
+                                        <div class="profile-picture"><img src="../../assets/images/person2.png" alt="Foto Person"></div>
+                                        <div class="profile-info">
+                                            <h4>Kaliya Annura</h4>
+                                            <p>2 jam yang lalu</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-image"><img src="../../assets/images/bg-ulas2.png" alt="Ulasan"></div>
+                                    <div class="card-body">
+                                        <h3>Cara Menjaga Kesehatan Tubuh Agar Terhindar dari Penyakit</h3>
+                                        <p>Sebenarnya menerapkan berbagai cara menjaga kesehatan tubuh bukanlah hal yang sulit. Hanya saja, Anda harus konsisten dalam melakukannya. Hal ini perlu...</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-interactions">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M17.5 6.875C17.5 4.80393 15.7511 3.125 13.5938 3.125C11.9807 3.125 10.5961 4.06356 10 5.40285C9.40393 4.06356 8.01927 3.125 6.40625 3.125C4.24889 3.125 2.5 4.80393 2.5 6.875C2.5 12.8921 10 16.875 10 16.875C10 16.875 17.5 12.8921 17.5 6.875Z" stroke="#9E9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span>127</span>
+                                        </div>
+                                        <div class="card-interactions">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M7.1875 8.125C7.1875 8.29759 7.04759 8.4375 6.875 8.4375C6.70241 8.4375 6.5625 8.29759 6.5625 8.125C6.5625 7.95241 6.70241 7.8125 6.875 7.8125C7.04759 7.8125 7.1875 7.95241 7.1875 8.125ZM7.1875 8.125H6.875M10.3125 8.125C10.3125 8.29759 10.1726 8.4375 10 8.4375C9.82741 8.4375 9.6875 8.29759 9.6875 8.125C9.6875 7.95241 9.82741 7.8125 10 7.8125C10.1726 7.8125 10.3125 7.95241 10.3125 8.125ZM10.3125 8.125H10M13.4375 8.125C13.4375 8.29759 13.2976 8.4375 13.125 8.4375C12.9524 8.4375 12.8125 8.29759 12.8125 8.125C12.8125 7.95241 12.9524 7.8125 13.125 7.8125C13.2976 7.8125 13.4375 7.95241 13.4375 8.125ZM13.4375 8.125H13.125M1.875 10.6328C1.875 11.967 2.81118 13.1284 4.13122 13.3225C5.03631 13.4555 5.95126 13.5583 6.875 13.6297V17.5L10.3612 14.0138C10.5335 13.8415 10.7661 13.7435 11.0097 13.7375C12.656 13.6967 14.2776 13.5565 15.8687 13.3226C17.1888 13.1285 18.125 11.9671 18.125 10.6329V5.61713C18.125 4.28288 17.1888 3.12152 15.8687 2.92745C13.9534 2.64584 11.9938 2.5 10.0002 2.5C8.00647 2.5 6.04676 2.64587 4.13122 2.92752C2.81118 3.12161 1.875 4.28297 1.875 5.6172V10.6328Z" stroke="#9E9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span> 27</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 3 -->
+                                <div class="card animate1" style="--a:2;">
+                                    <div class="card-header">
+                                        <div class="profile-picture"><img src="../../assets/images/person3.png" alt="Foto Person"></div>
+                                        <div class="profile-info">
+                                            <h4>Kaliya Annura</h4>
+                                            <p>2 jam yang lalu</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-image"><img src="../../assets/images/bg-ulas3.png" alt="Ulasan"></div>
+                                    <div class="card-body">
+                                        <h3>Apa Itu Klorida Dan Apa Manfaatnya Untuk Tubuh</h3>
+                                        <p>Klorida adalah ion negatif (anion) yang terbentuk ketika unsur klorin (Cl) memperoleh satu eletron, menghasilan ion dengan muatan negatif (Cl⁻). Ini adalah salah satu...</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-interactions">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M17.5 6.875C17.5 4.80393 15.7511 3.125 13.5938 3.125C11.9807 3.125 10.5961 4.06356 10 5.40285C9.40393 4.06356 8.01927 3.125 6.40625 3.125C4.24889 3.125 2.5 4.80393 2.5 6.875C2.5 12.8921 10 16.875 10 16.875C10 16.875 17.5 12.8921 17.5 6.875Z" stroke="#9E9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span>127</span>
+                                        </div>
+                                        <div class="card-interactions">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M7.1875 8.125C7.1875 8.29759 7.04759 8.4375 6.875 8.4375C6.70241 8.4375 6.5625 8.29759 6.5625 8.125C6.5625 7.95241 6.70241 7.8125 6.875 7.8125C7.04759 7.8125 7.1875 7.95241 7.1875 8.125ZM7.1875 8.125H6.875M10.3125 8.125C10.3125 8.29759 10.1726 8.4375 10 8.4375C9.82741 8.4375 9.6875 8.29759 9.6875 8.125C9.6875 7.95241 9.82741 7.8125 10 7.8125C10.1726 7.8125 10.3125 7.95241 10.3125 8.125ZM10.3125 8.125H10M13.4375 8.125C13.4375 8.29759 13.2976 8.4375 13.125 8.4375C12.9524 8.4375 12.8125 8.29759 12.8125 8.125C12.8125 7.95241 12.9524 7.8125 13.125 7.8125C13.2976 7.8125 13.4375 7.95241 13.4375 8.125ZM13.4375 8.125H13.125M1.875 10.6328C1.875 11.967 2.81118 13.1284 4.13122 13.3225C5.03631 13.4555 5.95126 13.5583 6.875 13.6297V17.5L10.3612 14.0138C10.5335 13.8415 10.7661 13.7435 11.0097 13.7375C12.656 13.6967 14.2776 13.5565 15.8687 13.3226C17.1888 13.1285 18.125 11.9671 18.125 10.6329V5.61713C18.125 4.28288 17.1888 3.12152 15.8687 2.92745C13.9534 2.64584 11.9938 2.5 10.0002 2.5C8.00647 2.5 6.04676 2.64587 4.13122 2.92752C2.81118 3.12161 1.875 4.28297 1.875 5.6172V10.6328Z" stroke="#9E9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span> 27</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 4 -->
+                                <div class="card animate1" style="--a:3;">
+                                    <div class="card-header">
+                                        <div class="profile-picture"><img src="../../assets/images/person4.png" alt="Foto Person"></div>
+                                        <div class="profile-info">
+                                            <h4>Kaliya Annura</h4>
+                                            <p>2 jam yang lalu</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-image"><img src="../../assets/images/bg-ulas4.png" alt="Ulasan"></div>
+                                    <div class="card-body">
+                                        <h3>Apa Itu Fosfat Dan Apa Manfaatnya Untuk Kesehatan Tubuh</h3>
+                                        <p>Fosfat adalah zat kimia di dalam tubuh yang terbangun atas mineral fosfor, yang berasal dari makanan dan oksigen. Dalam tubuh manusia, fosfat dapat ditemuka...</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-interactions">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M17.5 6.875C17.5 4.80393 15.7511 3.125 13.5938 3.125C11.9807 3.125 10.5961 4.06356 10 5.40285C9.40393 4.06356 8.01927 3.125 6.40625 3.125C4.24889 3.125 2.5 4.80393 2.5 6.875C2.5 12.8921 10 16.875 10 16.875C10 16.875 17.5 12.8921 17.5 6.875Z" stroke="#9E9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span>127</span>
+                                        </div>
+                                        <div class="card-interactions">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M7.1875 8.125C7.1875 8.29759 7.04759 8.4375 6.875 8.4375C6.70241 8.4375 6.5625 8.29759 6.5625 8.125C6.5625 7.95241 6.70241 7.8125 6.875 7.8125C7.04759 7.8125 7.1875 7.95241 7.1875 8.125ZM7.1875 8.125H6.875M10.3125 8.125C10.3125 8.29759 10.1726 8.4375 10 8.4375C9.82741 8.4375 9.6875 8.29759 9.6875 8.125C9.6875 7.95241 9.82741 7.8125 10 7.8125C10.1726 7.8125 10.3125 7.95241 10.3125 8.125ZM10.3125 8.125H10M13.4375 8.125C13.4375 8.29759 13.2976 8.4375 13.125 8.4375C12.9524 8.4375 12.8125 8.29759 12.8125 8.125C12.8125 7.95241 12.9524 7.8125 13.125 7.8125C13.2976 7.8125 13.4375 7.95241 13.4375 8.125ZM13.4375 8.125H13.125M1.875 10.6328C1.875 11.967 2.81118 13.1284 4.13122 13.3225C5.03631 13.4555 5.95126 13.5583 6.875 13.6297V17.5L10.3612 14.0138C10.5335 13.8415 10.7661 13.7435 11.0097 13.7375C12.656 13.6967 14.2776 13.5565 15.8687 13.3226C17.1888 13.1285 18.125 11.9671 18.125 10.6329V5.61713C18.125 4.28288 17.1888 3.12152 15.8687 2.92745C13.9534 2.64584 11.9938 2.5 10.0002 2.5C8.00647 2.5 6.04676 2.64587 4.13122 2.92752C2.81118 3.12161 1.875 4.28297 1.875 5.6172V10.6328Z" stroke="#9E9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span> 27</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 5 -->
+                                <div class="card animate1" style="--a:4;">
+                                    <div class="card-header">
+                                        <div class="profile-picture"><img src="../../assets/images/person5.png" alt="Foto Person"></div>
+                                        <div class="profile-info">
+                                            <h4>Kaliya Annura</h4>
+                                            <p>2 jam yang lalu</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-image"><img src="../../assets/images/bg-ulas5.png" alt="Ulasan"></div>
+                                    <div class="card-body">
+                                        <h3>Bagaimana Pertolongan Pertama Pada Keracunan Makanan</h3>
+                                        <p>Keracunan makanan adalah kondisi medis yang terjadi ketika seseorang mengonsumsi makanan atau minuman yang terkontaminasi oleh bakteri, virus, parasi...</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-interactions">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M17.5 6.875C17.5 4.80393 15.7511 3.125 13.5938 3.125C11.9807 3.125 10.5961 4.06356 10 5.40285C9.40393 4.06356 8.01927 3.125 6.40625 3.125C4.24889 3.125 2.5 4.80393 2.5 6.875C2.5 12.8921 10 16.875 10 16.875C10 16.875 17.5 12.8921 17.5 6.875Z" stroke="#9E9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span>127</span>
+                                        </div>
+                                        <div class="card-interactions">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M7.1875 8.125C7.1875 8.29759 7.04759 8.4375 6.875 8.4375C6.70241 8.4375 6.5625 8.29759 6.5625 8.125C6.5625 7.95241 6.70241 7.8125 6.875 7.8125C7.04759 7.8125 7.1875 7.95241 7.1875 8.125ZM7.1875 8.125H6.875M10.3125 8.125C10.3125 8.29759 10.1726 8.4375 10 8.4375C9.82741 8.4375 9.6875 8.29759 9.6875 8.125C9.6875 7.95241 9.82741 7.8125 10 7.8125C10.1726 7.8125 10.3125 7.95241 10.3125 8.125ZM10.3125 8.125H10M13.4375 8.125C13.4375 8.29759 13.2976 8.4375 13.125 8.4375C12.9524 8.4375 12.8125 8.29759 12.8125 8.125C12.8125 7.95241 12.9524 7.8125 13.125 7.8125C13.2976 7.8125 13.4375 7.95241 13.4375 8.125ZM13.4375 8.125H13.125M1.875 10.6328C1.875 11.967 2.81118 13.1284 4.13122 13.3225C5.03631 13.4555 5.95126 13.5583 6.875 13.6297V17.5L10.3612 14.0138C10.5335 13.8415 10.7661 13.7435 11.0097 13.7375C12.656 13.6967 14.2776 13.5565 15.8687 13.3226C17.1888 13.1285 18.125 11.9671 18.125 10.6329V5.61713C18.125 4.28288 17.1888 3.12152 15.8687 2.92745C13.9534 2.64584 11.9938 2.5 10.0002 2.5C8.00647 2.5 6.04676 2.64587 4.13122 2.92752C2.81118 3.12161 1.875 4.28297 1.875 5.6172V10.6328Z" stroke="#9E9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span> 27</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 6 -->
+                                <div class="card animate1" style="--a:5;">
+                                    <div class="card-header">
+                                        <div class="profile-picture"><img src="../../assets/images/person6.png" alt="Foto Person"></div>
+                                        <div class="profile-info">
+                                            <h4>Kaliya Annura</h4>
+                                            <p>2 jam yang lalu</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-image"><img src="../../assets/images/bg-ulas6.png" alt="Ulasan"></div>
+                                    <div class="card-body">
+                                        <h3>Daun Bidara - Tumbuhan dengan Banyak Manfaat</h3>
+                                        <p>Daun bidara mungkin masih jarang kita dengar. Padahal  tanaman ini memiliki banyak manfaat bagi tubuh kita, salah satunya adalah untuk pencega...</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-interactions">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M17.5 6.875C17.5 4.80393 15.7511 3.125 13.5938 3.125C11.9807 3.125 10.5961 4.06356 10 5.40285C9.40393 4.06356 8.01927 3.125 6.40625 3.125C4.24889 3.125 2.5 4.80393 2.5 6.875C2.5 12.8921 10 16.875 10 16.875C10 16.875 17.5 12.8921 17.5 6.875Z" stroke="#9E9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span>127</span>
+                                        </div>
+                                        <div class="card-interactions">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M7.1875 8.125C7.1875 8.29759 7.04759 8.4375 6.875 8.4375C6.70241 8.4375 6.5625 8.29759 6.5625 8.125C6.5625 7.95241 6.70241 7.8125 6.875 7.8125C7.04759 7.8125 7.1875 7.95241 7.1875 8.125ZM7.1875 8.125H6.875M10.3125 8.125C10.3125 8.29759 10.1726 8.4375 10 8.4375C9.82741 8.4375 9.6875 8.29759 9.6875 8.125C9.6875 7.95241 9.82741 7.8125 10 7.8125C10.1726 7.8125 10.3125 7.95241 10.3125 8.125ZM10.3125 8.125H10M13.4375 8.125C13.4375 8.29759 13.2976 8.4375 13.125 8.4375C12.9524 8.4375 12.8125 8.29759 12.8125 8.125C12.8125 7.95241 12.9524 7.8125 13.125 7.8125C13.2976 7.8125 13.4375 7.95241 13.4375 8.125ZM13.4375 8.125H13.125M1.875 10.6328C1.875 11.967 2.81118 13.1284 4.13122 13.3225C5.03631 13.4555 5.95126 13.5583 6.875 13.6297V17.5L10.3612 14.0138C10.5335 13.8415 10.7661 13.7435 11.0097 13.7375C12.656 13.6967 14.2776 13.5565 15.8687 13.3226C17.1888 13.1285 18.125 11.9671 18.125 10.6329V5.61713C18.125 4.28288 17.1888 3.12152 15.8687 2.92745C13.9534 2.64584 11.9938 2.5 10.0002 2.5C8.00647 2.5 6.04676 2.64587 4.13122 2.92752C2.81118 3.12161 1.875 4.28297 1.875 5.6172V10.6328Z" stroke="#9E9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span> 27</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pagination-container animate-image">
+                                <button class="pagination-button prev" aria-label="Previous">&lt;</button>
+                                <ul class="pagination-list">
+                                    <li><button class="pagination-button active" aria-label="Page 1">1</button></li>
+                                    <li><button class="pagination-button" aria-label="Page 2">2</button></li>
+                                    <li><button class="pagination-button" aria-label="Page 3">3</button></li>
+                                    <li><button class="pagination-button" aria-label="Page 4">4</button></li>
+                                    <li><button class="pagination-button" aria-label="Page 5">5</button></li>
+                                    <li><button class="pagination-button" aria-label="Page 6">6</button></li>
+                                    <li><button class="pagination-button" aria-label="Page 7">7</button></li>
+                                </ul>
+                                <button class="pagination-button next" aria-label="Next">&gt;</button>
+                            </div>
+
+                        </div>
+                    </section>
+                </main>
+
+                <footer>
+                    <div class="footer">
+                        <div class="main-footer">
+                            <div class="footer-container">
+                                <div class="footer-section about animate1" style="--a:0;">
+                                    <div class="logo-container">
+                                        <img src="../../../assets/images/logo-desain.png" alt="Logo" class="logo">
+                                        <h1>NutriTrack</h1>
+                                    </div>
+                                    <p>Lacak aktivitas, pola makan, hingga kesehatan untuk mencapai gaya hidup yang
+                                        lebih sehat.</p>
+                                    <div class="social-icons">
+                                        <a href="#"><i class='bx bxl-facebook'></i></i></a>
+                                        <a href="#"><i class='bx bxl-twitter'></i></i></a>
+                                        <a href="#"><i class='bx bxl-instagram-alt'></i></i></a>
+                                        <a href="#"><i class='bx bxl-linkedin'></i></i></a>
+                                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                                    </div>
+                                </div>
+                                <div class="footer-section links animate1" style="--a:1;">
+                                    <h2>Product</h2>
+                                    <ul>
+                                        <li><a href="#">Features</a></li>
+                                        <li><a href="#">Pricing</a></li>
+                                        <li><a href="#">Case studies</a></li>
+                                        <li><a href="#">Reviews</a></li>
+                                        <li><a href="#">Updates</a></li>
+                                    </ul>
+                                </div>
+                                <div class="footer-section links animate1" style="--a:2;">
+                                    <h2>Support</h2>
+                                    <ul>
+                                        <li><a href="#">Getting started</a></li>
+                                        <li><a href="#">Help center</a></li>
+                                        <li><a href="#">Server status</a></li>
+                                        <li><a href="#">Report a bug</a></li>
+                                        <li><a href="#">Chat support</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="footer-section contact animate1" style="--a:3;">
+                                    <h2>Contacts us</h2>
+                                    <ul>
+                                        <li><a href="mailto:contact@company.com"><i class='bx bx-envelope'></i>
+                                                contact@naxdesigners.com</a></li>
+                                        <li><a href="tel:+14146875892"><i class='bx bx-phone'></i> +62 888 143127119</a>
+                                        </li>
+                                        <li><a href="https://maps.app.goo.gl/JkPu5CWncLRmG48MA" target="_blank"><i
+                                                    class='bx bx-map'></i> Jl. Simpang Lima, Kota Semarang</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer-bottom">
+                                <p class="animate2">Copyright &copy; 2024 N4x D3sign3rs</p>
+                                <p class="animate2"> All Rights Reserved |
+                                    <a href="#">Terms and Conditions |</a>
+                                    <a href="#">Privacy Policy</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <div class="loader-container">
+            <!-- <div class="loader"></div> -->
+            <div class="container">
+                <div class="loader">
+                    <span style="--i:0;"></span>
+                    <span style="--i:1;"></span>
+                    <span style="--i:2;"></span>
+                    <span style="--i:3;"></span>
+                    <span style="--i:4;"></span>
+                    <span style="--i:5;"></span>
+                    <span style="--i:6;"></span>
+                    <!-- <span style="--i:7;"></span> -->
+                    <span class="rotate" style="--j:0;"></span>
+                    <span class="rotate" style="--j:1;"></span>
+                    <span class="rotate" style="--j:2;"></span>
+                    <span class="rotate" style="--j:3;"></span>
+                    <!-- <span class="rotate" style="--j:4;"></span> -->
+                </div>
+            </div>
+        </div>
+        <svg style="width: 0;height: 0;">
+            <filter id="Gooey">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+                <feColorMatrix Values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 20 -10 
+                " />
+            </filter>
+        </svg>
+        <div id="progress">
+            <span id="progress_value"><i class='bx bxs-chevrons-up bx-flashing'></i></span>
+        </div>
+    </div>
+
+    <script>
+        function logout() {
+            localStorage.removeItem('isLoggedIn');
+            window.location.href = './sign.html';
+        }
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+            if (isLoggedIn === 'true') {
+                // Tampilkan profileBox dan sembunyikan startProfile
+                document.querySelector('.profileBox').style.display = 'flex';
+                document.querySelector('.startProfile').style.display = 'none';
+            } else {
+                // Sembunyikan profileBox dan tampilkan startProfile
+                document.querySelector('.profileBox').style.display = 'none';
+                document.querySelector('.startProfile').style.display = 'block';
+            }
+        });
+
+    </script>
+
+    <script src="../js/comunity.js"></script>
+
+</body>
+
+</html>
