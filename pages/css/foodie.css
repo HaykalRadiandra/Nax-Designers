@@ -1042,11 +1042,18 @@ main .tracking-content .cta-button {
     border-radius: 12px;
     border: none;
     cursor: pointer;
+    padding: 1rem;
+    color: var(--text-general);
 }
     
-main .tracking-content .cta-button a {
+main .tracking-content a {
     text-decoration: none;
     color: var(--text-general);
+    background-color: transparent;
+    font-size: 15px;
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
 }
     
 main .tracking-content .cta-button:hover {
@@ -1263,7 +1270,7 @@ main .popup-button {
     width: 100%; 
 }
 
-main .popup-button .btn1 {
+/* main .popup-button .btn1 {
     background-color: transparent;
     border: 0.5px solid #ffffff;
     font-size: 15px;
@@ -1276,7 +1283,7 @@ main .popup-button .btn1 {
     display: flex;
     cursor: pointer;
     text-decoration: none;
-}
+} */
 
 main .save {
     background-color: #1E5FD7;

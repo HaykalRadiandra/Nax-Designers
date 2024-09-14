@@ -918,6 +918,10 @@ main .stat-content {
     gap: 2rem;
 }
 
+main .stat-content a {
+    text-decoration: none;
+}
+
 main .stat-content h1 {
     line-height: 1;
     margin: 0;
@@ -967,6 +971,7 @@ main .stat-content .cta-button {
     border-radius: 12px;
     border: none;
     cursor: pointer;
+    color: var(--text-general);
 }
     
 main .stat-content .cta-button a {

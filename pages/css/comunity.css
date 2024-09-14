@@ -956,6 +956,7 @@ main .tips-content .cta-button {
     border-radius: 12px;
     cursor: pointer;
     transition: background 2s ease, border 2s ease;
+    color: var(--text-general);
 }
 
 main .tips-content .cta-button a {
