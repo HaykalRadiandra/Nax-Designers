@@ -1270,7 +1270,7 @@ main .popup-button {
     width: 100%; 
 }
 
-/* main .popup-button .btn1 {
+main .popup-button .btn1 {
     background-color: transparent;
     border: 0.5px solid #ffffff;
     font-size: 15px;
@@ -1283,7 +1283,7 @@ main .popup-button {
     display: flex;
     cursor: pointer;
     text-decoration: none;
-} */
+}
 
 main .save {
     background-color: #1E5FD7;
